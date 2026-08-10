@@ -1,0 +1,87 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #000 NAME:		0
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($54A000)
+// --------------------------------------
+
+// 1. Classic Rule
+#WRITE(GBA,$1B5D10)
+Classic bomb battle.<LINE>
+Defeat all the rivals!<WAIT>
+
+// 2. Survival Rule
+#WRITE(GBA,$1B5D14)
+Team survival mode.<LINE>
+Last one wins!<WAIT>
+
+// 3. Louie Rule
+#WRITE(GBA,$1B5D18)
+Ride Louie for battle.<LINE>
+Gain a big advantage!<WAIT>
+
+// 4. Stage & Items Rule
+#WRITE(GBA,$1B5D1C)
+Five stages to select.<LINE>
+Set items and Hcaps!<END>
+
+// 5. Debug Menu Hidden Rule
+#WRITE(GBA,$1B5D20)
+Custom Debug Mode.<LINE>
+Adjust the settings!<END>
+
+//POINTER #0 @ $1BD804 - STRING #0 @ $1BD770
+
+#WRITE(GBA,$1BD804)
+Make sure all players are ready.<LINE>
+Press the A button when ready.<NEXT>
+
+
+//POINTER #1 @ $1BD808 - STRING #1 @ $1BD7A7
+
+#WRITE(GBA,$1BD808)
+Data in progress<NEXT>
+
+
+//POINTER #2 @ $1BD80C - STRING #2 @ $1BD7B5
+
+#WRITE(GBA,$1BD80C)
+<NUMBER2>and<PLACE>Double Battle!<NEXT>
+
+
+//POINTER #3 @ $1BD810 - STRING #3 @ $1BD7C3
+
+#WRITE(GBA,$1BD810)
+<NUMBER2>Well<NUMBER0>Damaged<NEXT>
+
+
+//POINTER #4 @ $1BD814 - STRING #4 @ $1BD7D2
+
+#WRITE(GBA,$1BD814)
+Number of players is being confirmed<NEXT>
+
+
+//POINTER #5 @ $1BD818 - STRING #5 @ $1BD7E8
+
+#WRITE(GBA,$1BD818)
+Set Rules<NEXT>
+
+
+//POINTER #6 @ $1BD81C - STRING #6 @ $1BD7F1
+
+#WRITE(GBA,$1BD81C)
+Loading in progress<NEXT>
