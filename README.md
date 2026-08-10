@@ -13,7 +13,7 @@ Bomberman Jetters Translation Project
 
 # What is different from the previous project?
 * Well for starters, i fixed a few script errors with lines running over one another in a few locations in the game or minor translation errors (I went and 100% the game to find them all).
-* I translated the rest of the graphic screens i can find that players will run into. ex. Title screen, the entire multipalyer mode and even the debug menu.
+* I translated the rest of the graphic screens i can find that players will run into. ex. Title screen, the entire multiplayer mode and even the debug menu.
 * This was a very big learning experience for me from the nintendo switch hacking i do so i needed to learn lots and even make tools that may or may not be necessary due to my own ignorance but helped me get this job done.
 * There are some graphic issues with disabled tile spots in multiplayer/minigame graphics so theres holes in my graphics but they work to convey what is needed.
 * I cannot for the life of me get any debugger to work for gba so i cant fix these inactive tiles. (Offer help if you want/can)
