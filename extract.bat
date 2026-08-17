@@ -345,6 +345,15 @@ python tools\dump_raw.py jetters.gba extract\StoryMini_Pal.bin 262DE0 200
 tools\gbamdc.exe -e jetters.gba extract\StoryMini_Tiles.bin 262E00
 tools\R4 extract\StoryMini_Pal.bin extract\StoryMini_Tiles.bin 32 extract\StoryMini.bmp
 
+:: Moto Jetter Mini Game
+python tools\dump_raw.py jetters.gba extract\MotoJet_Pal.bin 289EEC 200
+tools\gbamdc.exe -e jetters.gba extract\MotoJet_Tiles.bin 289F0C
+tools\R4 extract\MotoJet_Pal.bin extract\MotoJet_Tiles.bin 32 extract\MotoJet.bmp
+python tools\dump_raw.py jetters.gba extract\MotoMini_Pal.bin D2904 200
+tools\gbamdc.exe -e jetters.gba extract\MotoMini_Tiles.bin D2F54
+tools\R4 extract\MotoJet_Pal.bin extract\MotoMini_Tiles.bin 32 extract\MotoMini.bmp
+
+
 :: Credits END
 python tools\dump_raw.py jetters.gba extract\EndCred_Pal.bin 25EDB4 200
 tools\gbamdc.exe -e jetters.gba extract\EndCred_Tiles.bin 25EDD4

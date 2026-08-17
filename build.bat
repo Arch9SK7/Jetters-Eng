@@ -90,6 +90,12 @@ tools\lzss -evo build\CubRace_Tiles.bin
 tools\g4 build\CubScoreTime_Tiles.bin assets\CubScoreTime.bmp
 tools\lzss -evo build\CubScoreTime_Tiles.bin
 
+:: Moto Jetter Mini Game
+tools\g4custom build\MotoJet_Tiles.bin assets\MotoJet.bmp
+tools\lzss -evo build\MotoJet_Tiles.bin
+tools\g4custom build\MotoMini_Tiles.bin assets\MotoMini.bmp
+tools\lzss -evo build\MotoMini_Tiles.bin
+
 :: End credits
 tools\g4custom build\EndCred_Tiles.bin assets\EndCred.bmp
 tools\lzss -evo build\EndCred_Tiles.bin

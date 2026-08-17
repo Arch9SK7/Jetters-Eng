@@ -135,6 +135,12 @@ New_MPText:
 .org 0x081D9D6C
 .import "build\CubScoreTime_Pal.bin"
 
+.org 0x08289F0C
+.import "build\MotoJet_Tiles.bin"
+
+.org 0x080D2F54
+.import "build\MotoMini_Tiles.bin"
+
 .org 0x0825EDD4
 .import "build\EndCred_Tiles.bin"
 
