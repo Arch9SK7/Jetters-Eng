@@ -1,0 +1,92 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #003 NAME:		3 Ceedrun Minigame (Unused; Tournament)
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($551400)
+// --------------------------------------
+
+//POINTER #0 @ $1BDE58 - STRING #0 @ $1BDD30
+
+#WRITE(GBA,$1BDE58)
+Will the fire Ceedrun breathes shoot upward?<LINE>
+Predict if it's coming low, and guard!<WAIT>
+
+<NEXT>
+
+
+//POINTER #1 @ $1BDE5C - STRING #1 @ $1BDD5E
+
+#WRITE(GBA,$1BDE5C)
+Block successfully 3 times and Bomberman wins<LINE>
+Fail 3 times and Ceedrun wins.<WAIT>
+
+<NEXT>
+
+
+//POINTER #2 @ $1BDE60 - STRING #2 @ $1BDD92
+
+#WRITE(GBA,$1BDE60)
+Now then, high or low!?<NEXT>
+
+
+//POINTER #3 @ $1BDE64 - STRING #3 @ $1BDD9F
+
+#WRITE(GBA,$1BDE64)
+Yes! Guard successful! Bomberman<LINE>
+blocked Ceedrun's fire!<WAIT>
+
+<NEXT>
+
+
+//POINTER #4 @ $1BDE68 - STRING #4 @ $1BDDC9
+
+#WRITE(GBA,$1BDE68)
+Bomberman gets 1 point!<WAIT>
+
+<NEXT>
+
+
+//POINTER #5 @ $1BDE6C - STRING #5 @ $1BDDDC
+
+#WRITE(GBA,$1BDE6C)
+Oh no! Guard failed! Bomberman<LINE>
+couldn't block Ceedrun's fire!<WAIT>
+
+<NEXT>
+
+
+//POINTER #6 @ $1BDE70 - STRING #6 @ $1BDE0A
+
+#WRITE(GBA,$1BDE70)
+Ceedrun gets 1 point.<WAIT>
+
+<NEXT>
+
+
+//POINTER #7 @ $1BDE74 - STRING #7 @ $1BDE1B
+
+#WRITE(GBA,$1BDE74)
+Bomberman gets 3 points!<LINE>
+Bomberman wins!<END>
+
+
+//POINTER #8 @ $1BDE78 - STRING #8 @ $1BDE3A
+
+#WRITE(GBA,$1BDE78)
+Ceedrun gets 3 points!<LINE>
+Ceedrun wins!<END>
+

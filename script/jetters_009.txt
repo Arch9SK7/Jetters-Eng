@@ -1,0 +1,1407 @@
+//GAME NAME:		Bomberman Jetters - Densetsu no Bomberman (GBA)
+
+//BLOCK #009 NAME:		(Unused, Tournament Fantasy Base)
+
+// --------------------------------------
+// Define a TABLE
+#VAR(Table, TABLE)
+
+// Load and activate the table
+#ADDTBL("script/jetters_eng.tbl", Table)
+#ACTIVETBL(Table)
+
+// Setup GBA pointers and Pointer Table
+#VAR(GBA, CUSTOMPOINTER)
+
+// Create our pointer type
+#CREATEPTR(GBA, "LINEAR", $-08000000, 32)
+
+#JMP($57B000)
+// --------------------------------------
+
+//POINTER #0 @ $1CF708 - STRING #0 @ $1CCBB8
+
+#WRITE(GBA,$1CF708)
+ Phew, you saved me... Thanks!<WAIT>
+
+ I'm ToughGuy!<LINE>
+ To repay you, I'll lend you a hand!<WAIT>
+
+ Karabon ToughGuy<LINE>
+ joined your team!<SFX><$0C><WAIT>
+
+ My ability is the<LINE>
+ Power Glove!<WAIT>
+
+ After placing a bomb with the A Button...<WAIT>
+
+ press the A Button again<LINE>
+ and you can lift the bomb.<WAIT>
+
+ If you hold the button down, you can<LINE>
+ walk around while carrying the bomb...<WAIT>
+
+ Release the A Button, and you'll<LINE>
+ throw it in the direction you're facing.<WAIT>
+
+ And believe it or not, as long as<LINE>
+ you have me with you...<WAIT>
+
+ you can use my ability anytime,<LINE>
+ even if you don't have me equipped.<WAIT>
+
+ But if you want to level me up,<LINE>
+ you have to equip me.<WAIT>
+
+ Also, there's a Karabon named MarinGon.<LINE>
+ When you have MarinGon equipped...<WAIT>
+
+ you won't be able to use the Power Glove<LINE>
+ ability, so be careful.<WAIT>
+
+ Do you want to set me to the B Button?<LINE>
+  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$09><$36><$09><$37> Oh, so you figured this place out...<WAIT>
+
+ Believe it or not, this is a<LINE>
+ secret hot spring!<WAIT>
+
+ ...Well, I guess you already knew that.<WAIT>
+
+ You can get in, but the truth is,<LINE>
+ the temperature of this hot spring...<WAIT>
+
+ is absolutely perfect for<LINE>
+ hatching Karabon Eggs.<WAIT>
+
+ If you ever get your hands on a<LINE>
+ Karabon Egg, you should come here.<END>
+
+
+//POINTER #1 @ $1CF70C - STRING #1 @ $1CCD59
+
+#WRITE(GBA,$1CF70C)
+ Oh, so you figured this place out...<WAIT>
+
+ Believe it or not, this is a<LINE>
+ secret hot spring!<WAIT>
+
+ ...Well, I guess you already knew that.<WAIT>
+
+ You can get in, but the truth is,<LINE>
+ the temperature of this hot spring...<WAIT>
+
+ is absolutely perfect for<LINE>
+ hatching Karabon Eggs.<WAIT>
+
+ If you ever get your hands on a<LINE>
+ Karabon Egg, you should come here.<END>
+
+
+//POINTER #2 @ $1CF710 - STRING #2 @ $1CCDF6
+
+#WRITE(GBA,$1CF710)
+<CLEAR_FLAG><$00><$33> Oh, looks like you brought a<LINE>
+ Karabon Egg!<WAIT>
+
+ Go on, don't just stand there.<LINE>
+ Dip it in the hot spring!<END>
+
+
+//POINTER #3 @ $1CF714 - STRING #3 @ $1CCE2F
+
+#WRITE(GBA,$1CF714)
+ ....................................<LINE>
+ ....................................<WAIT>
+
+ ....................................<LINE>
+ ......Oh!? It hatched!!<END>
+
+
+//POINTER #4 @ $1CF718 - STRING #4 @ $1CCE7F
+
+#WRITE(GBA,$1CF718)
+ Gau gau~ I was having a nice nap.<LINE>
+ Who woke me up gau~<END>
+
+
+//POINTER #5 @ $1CF71C - STRING #5 @ $1CCEA4
+
+#WRITE(GBA,$1CF71C)
+<JUMP_FLAG_SET><$01><$4A><$09><$4A> Hello. It's cold again today, isn't it.<WAIT>
+
+ Come to think of it, there's a flower<LINE>
+ around here called the Frozen Flower...<WAIT>
+
+ It blooms nearby, but have<LINE>
+ you seen it yet?<WAIT>
+
+ Well, a Pteradon eats them<LINE>
+ as soon as they bloom...<WAIT>
+
+ so I don't think they're<LINE>
+ very easy to find.<END>
+
+
+//POINTER #6 @ $1CF720 - STRING #6 @ $1CCF2B
+
+#WRITE(GBA,$1CF720)
+ Queen Emeralda, who lives in the<LINE>
+ Fairy Palace...<WAIT>
+
+ has ruled over this planet<LINE>
+ since ancient times.<WAIT>
+
+ She originally lived in a castle<LINE>
+ high up in the sky, you know.<WAIT>
+
+ But when the meteorite fell,<LINE>
+ something happened to the castle...<WAIT>
+
+ and she came down to the surface.<WAIT>
+
+ Come to think of it, there used to be<LINE>
+ 4 Sages living in that castle...<WAIT>
+
+ I wonder how they're doing<LINE>
+ in this terrible cold...<WAIT>
+
+ People tell me, "They're getting old,<LINE>
+ I'm worried about them..."<WAIT>
+
+ but I'm still young and spry!<WAIT>
+
+ ...They'd probably scold me<LINE>
+ if they heard me say that, though.<END>
+
+
+//POINTER #7 @ $1CF724 - STRING #7 @ $1CD03E
+
+#WRITE(GBA,$1CF724)
+<JUMP_FLAG_SET><$01><$3E><$09><$08><JUMP_FULL_HEALTH><$09><$45> Huh? You want to go to the castle...?<LINE>
+ That's impossible, no way, no how!<WAIT>
+
+ The bridge to the castle froze over<LINE>
+ and collapsed, you see.<WAIT>
+
+ Right now, the only thing that can go<LINE>
+ back and forth to the castle is...<WAIT>
+
+ something like a Beast Pommy that can<LINE>
+ fly right over that cliff!<WAIT>
+
+ ...Oh? Are you hurt?<LINE>
+ ...Hold still for a second.♥<HEAL><SFX><$30><WAIT>
+
+ There, all better! Be careful not to<LINE>
+ get yourself hurt too much, okay?♥<END>
+
+
+//POINTER #8 @ $1CF728 - STRING #8 @ $1CD11C
+
+#WRITE(GBA,$1CF728)
+<JUMP_FULL_HEALTH><$09><$46> Look, look! The ice on the<LINE>
+ castle melted!<WAIT>
+
+ ...Oh? Are you hurt?<LINE>
+ ...Hold still for a second.♥<HEAL><SFX><$30><WAIT>
+
+ There, all better! Be careful not to<LINE>
+ get yourself hurt too much, okay?♥<END>
+
+
+//POINTER #9 @ $1CF72C - STRING #9 @ $1CD186
+
+#WRITE(GBA,$1CF72C)
+<JUMP_FLAG_SET><$01><$3E><$09><$0A> On your way here, did you see those<LINE>
+ guys who jump to dodge bomb blasts?<WAIT>
+
+ It seems that once they jump...<WAIT>
+
+ they can't jump again for<LINE>
+ a little while.<WAIT>
+
+ If you use that to your advantage, I think<LINE>
+ you can beat them. Give it a try!<END>
+
+
+//POINTER #10 @ $1CF730 - STRING #10 @ $1CD20C
+
+#WRITE(GBA,$1CF730)
+ Now that the sky is clearing up, we can<LINE>
+ clearly see the Sky Castle Fantasy.<WAIT>
+
+ It feels so strange that Queen Emeralda,<LINE>
+ who rightfully belongs up there...<WAIT>
+
+ is residing right here<LINE>
+ in the Fairy Palace.<WAIT>
+
+ It's just like back when Fantasy<LINE>
+ was attacked in the past.<WAIT>
+
+ ...That blue-eyed warrior...<LINE>
+ I think his name was... Max?<WAIT>
+
+ Yes, that was his name.<LINE>
+ He saved my life.<WAIT>
+
+ I'd love to meet him again and<LINE>
+ properly thank him...<WAIT>
+
+ but when I ask around, they say there<LINE>
+ is no warrior by that name here now.<WAIT>
+
+ If you ever happen to meet him<LINE>
+ somewhere out in the universe...<WAIT>
+
+ could you tell him how<LINE>
+ grateful I am?<WAIT>
+
+ Please, I'm counting on you.<END>
+
+
+//POINTER #11 @ $1CF734 - STRING #11 @ $1CD37F
+
+#WRITE(GBA,$1CF734)
+<JUMP_FLAG_SET><$01><$3E><$09><$0C> Huh? You want me to summarize<LINE>
+ the situation? Sure... let's see...<WAIT>
+
+ A year ago, a meteorite fell and a weird<LINE>
+ tower appeared to the northwest.<WAIT>
+
+ It seems Fantasy was attacked<LINE>
+ by someone around that time, too.<WAIT>
+
+ Half a year ago, when weird monsters<LINE>
+ started roaming around outside...<WAIT>
+
+ Queen Emeralda and the others<LINE>
+ fled from Fantasy...<WAIT>
+
+ and arrived here at the Fairy Palace.<LINE>
+ ...If you want the exact details...<WAIT>
+
+ you should probably ask the<LINE>
+ soldiers in the Fairy Palace.<WAIT>
+
+ As for the person you're looking for,<LINE>
+ I just saw him last week.<WAIT>
+
+ But the very next day, a terrible blizzard<LINE>
+ suddenly started and lasted for days...<WAIT>
+
+ and the bridge connecting to the<LINE>
+ Fairy Palace collapsed.<WAIT>
+
+ I hear the inner area of the Fairy Palace<LINE>
+ is completely frozen over right now.<WAIT>
+
+ ...I don't know if that helps,<LINE>
+ but there you go.<END>
+
+
+//POINTER #12 @ $1CF738 - STRING #12 @ $1CD524
+
+#WRITE(GBA,$1CF738)
+ I heard the door to Queen Emeralda's<LINE>
+ room opened!<WAIT>
+
+ They say she's safe.<LINE>
+ ...Oh, thank goodness...<END>
+
+
+//POINTER #13 @ $1CF73C - STRING #13 @ $1CD562
+
+#WRITE(GBA,$1CF73C)
+ Hey, hey, listen!<LINE>
+ Last week...<WAIT>
+
+ A super cool guy dressed all in black<LINE>
+ came here!<WAIT>
+
+ Max? Wow, so that guy's<LINE>
+ name is Max?<WAIT>
+
+ For someone from another planet, he<LINE>
+ sure knew a lot about this area.<WAIT>
+
+ It really surprised me.<LINE>
+ ...I wonder if he's been here before?<END>
+
+
+//POINTER #14 @ $1CF740 - STRING #14 @ $1CD604
+
+#WRITE(GBA,$1CF740)
+<JUMP_FLAG_SET><$01><$42><$09><$29><JUMP_FLAG_SET><$01><$41><$09><$0F><JUMP_FLAG_SET><$01><$40><$09><$28><SET_FLAG><$01><$40><SET_FLAG><$00><$39> Welcome, glad you came... Hm?<LINE>
+ Are you interested in this egg?<WAIT>
+
+ This is a Karabon egg for a<LINE>
+ creature called Beast Pommy.<WAIT>
+
+ It was originally up on the cliff, but<LINE>
+ it seems to have slipped down.<WAIT>
+
+ I couldn't just leave it there,<LINE>
+ so I brought it here.<WAIT>
+
+ Huh? You want this egg?<LINE>
+ ...Well, let's see.<WAIT>
+
+ Tell you what, if you run a little errand<LINE>
+ for me, I'll give it to you as a reward.<WAIT>
+
+ Take this Wheat Flour to my older<LINE>
+ sister Gin in North Epsilon...<WAIT>
+
+ have her bake some bread, and<LINE>
+ bring it back here to me.<WAIT>
+
+ I'm counting on you.<WAIT>
+
+ Bomberman got the<LINE>
+ Wheat Flour!<SFX><$0C><END>
+
+
+//POINTER #15 @ $1CF744 - STRING #15 @ $1CD745
+
+#WRITE(GBA,$1CF744)
+<CLEAR_FLAG><$00><$3A> Oh, you ran the errand for me.<LINE>
+ Thank you.<WAIT>
+
+ Bomberman handed over<LINE>
+ the Bread.<SFX><$0C><WAIT>
+
+ Wow, this looks like another delicious<LINE>
+ loaf. I can't wait to eat it.<WAIT>
+
+ Well, a promise is a promise.<LINE>
+ Make sure you take good care of it.<WAIT>
+
+<SET_FLAG><$00><$33><SET_FLAG><$01><$42> Bomberman got the<LINE>
+ Egg!<SFX><$0C><END>
+
+
+//POINTER #16 @ $1CF748 - STRING #16 @ $1CD7DD
+
+#WRITE(GBA,$1CF748)
+<JUMP_FLAG_SET><$01><$44><$09><$47> Oh, youngster!<LINE>
+ Is this your first time around here?<WAIT>
+
+ If you come here, you simply must<LINE>
+ visit the hot spring!<WAIT>
+
+ Well, it's in a place that's a bit<LINE>
+ hard to find, though.<WAIT>
+
+ If you spotted it on your way here,<LINE>
+ you're quite lucky.<WAIT>
+
+ If you haven't found it yet,<LINE>
+ you should retrace your steps...<WAIT>
+
+ and try looking for it.<LINE>
+ ...Fuhoho.<END>
+
+
+//POINTER #17 @ $1CF74C - STRING #17 @ $1CD881
+
+#WRITE(GBA,$1CF74C)
+ I hope it gets warmer soon...<LINE>
+ It's been like this for half a year.<END>
+
+
+//POINTER #18 @ $1CF750 - STRING #18 @ $1CD8A7
+
+#WRITE(GBA,$1CF750)
+<JUMP_FLAG_CLEAR><$01><$40><$09><$2A><JUMP_FLAG_SET><$01><$41><$09><$2B><SET_FLAG><$01><$41><SET_FLAG><$00><$3A><CLEAR_FLAG><$00><$39> Oh, did you come on an errand for my<LINE>
+ little sister Kin in South Epsilon?<WAIT>
+
+ Thanks for the hard work...<LINE>
+ Well then, first give me the Wheat Flour.<WAIT>
+
+ Bomberman handed over<LINE>
+ the Wheat Flour.<SFX><$0C><WAIT>
+
+ Alright, I'll bake the bread right now,<LINE>
+ so wait just a minute.<WAIT>
+
+ ....................................<LINE>
+ ....................................<WAIT>
+
+ Here you go, freshly baked<LINE>
+ and delicious.<WAIT>
+
+ Bomberman got the<LINE>
+ Bread!<SFX><$0C><WAIT>
+
+ I definitely handed it to you, so<LINE>
+ deliver it before it gets cold.<END>
+
+
+//POINTER #19 @ $1CF754 - STRING #19 @ $1CD9C2
+
+#WRITE(GBA,$1CF754)
+<JUMP_FLAG_SET><$01><$3E><$09><$14> The door to Queen Emeralda's room is<LINE>
+ frozen shut and won't budge.<WAIT>
+
+ I have no idea what it's like inside...<LINE>
+ I wonder if Queen Emeralda is safe.<END>
+
+
+//POINTER #20 @ $1CF758 - STRING #20 @ $1CDA17
+
+#WRITE(GBA,$1CF758)
+ The ice on the door melted!<WAIT>
+
+ Queen Emeralda is safe, so<LINE>
+ that's a relief for now.<END>
+
+
+//POINTER #21 @ $1CF75C - STRING #21 @ $1CDA49
+
+#WRITE(GBA,$1CF75C)
+<JUMP_FLAG_SET><$01><$3E><$09><$16> Some years ago, when this planet was<LINE>
+ attacked by enemies just like it is now...<WAIT>
+
+ we soldiers serving the Fairy Palace<LINE>
+ joined forces...<WAIT>
+
+ and fought back against the enemy.<WAIT>
+
+ Among the soldiers, the bravest<LINE>
+ of all was...<WAIT>
+
+ a blue-eyed samurai named... Max.<WAIT>
+
+ If only Max were here<LINE>
+ at a time like this...<WAIT>
+
+ I wonder where he is and what<LINE>
+ he's doing right now...<END>
+
+
+//POINTER #22 @ $1CF760 - STRING #22 @ $1CDB26
+
+#WRITE(GBA,$1CF760)
+ The warrior named Max, who<LINE>
+ saved this planet in the past...<WAIT>
+
+ never returned after destroying<LINE>
+ the enemy fortress.<WAIT>
+
+ Was he caught in the<LINE>
+ fortress's explosion...?<WAIT>
+
+ Or did he set off on a journey to<LINE>
+ chase after the fleeing enemies...?<WAIT>
+
+ We have no idea where he is<LINE>
+ or what he's doing right now.<WAIT>
+
+ However, Queen Emeralda still...<WAIT>
+
+ believes in the day Max will return,<LINE>
+ and continues to wait for him.<END>
+
+
+//POINTER #23 @ $1CF764 - STRING #23 @ $1CDC02
+
+#WRITE(GBA,$1CF764)
+<JUMP_FLAG_SET><$01><$3E><$09><$18> I suspect that the recent cold weather...<WAIT>
+
+ is being caused by that<LINE>
+ tower to the west.<WAIT>
+
+ The day after the meteorite fell,<LINE>
+ that tower suddenly appeared...<WAIT>
+
+ and then the ground gradually<LINE>
+ began to freeze.<WAIT>
+
+ However, with the Fairy Palace in this<LINE>
+ state, we can't even go investigate.<WAIT>
+
+ ...What should we do...<END>
+
+
+//POINTER #24 @ $1CF768 - STRING #24 @ $1CDCAE
+
+#WRITE(GBA,$1CF768)
+ We know the enemies who attacked<LINE>
+ the Sky Castle Fantasy that day...<WAIT>
+
+ ...The ones who once plunged this<LINE>
+ planet into the depths of terror!<WAIT>
+
+ The 5 Dastardly Bombers!<WAIT>
+
+ There's no mistaking it!<LINE>
+ They didn't die...!<WAIT>
+
+ We fought to the bitter end in that past<LINE>
+ battle, even losing Max...<WAIT>
+
+ What in the world was<LINE>
+ that battle even for...<END>
+
+
+//POINTER #25 @ $1CF76C - STRING #25 @ $1CDD7A
+
+#WRITE(GBA,$1CF76C)
+<JUMP_FLAG_SET><$01><$3E><$09><$1A> If you go far south from where the<LINE>
+ tower stands, near the cliff...<WAIT>
+
+ there's a place where the<LINE>
+ Frozen Flower blooms.<WAIT>
+
+ I hear that flower is the favorite food<LINE>
+ of a Karabon called Pteradon.<END>
+
+
+//POINTER #26 @ $1CF770 - STRING #26 @ $1CDDE1
+
+#WRITE(GBA,$1CF770)
+ Queen Emeralda used to keep<LINE>
+ a pair of Karabons... but...<WAIT>
+
+ when Fantasy was invaded,<LINE>
+ the male one was stolen...<WAIT>
+
+ I believe the male had the ability<LINE>
+ to till the soil, but...<WAIT>
+
+ in a world like this, it might not<LINE>
+ be very useful anyway...<END>
+
+
+//POINTER #27 @ $1CF774 - STRING #27 @ $1CDE75
+
+#WRITE(GBA,$1CF774)
+<JUMP_FLAG_SET><$01><$63><$09><$42> Oh, it's you.<LINE>
+ The one who saved this castle.<WAIT>
+
+ Queen Emeralda told me to<LINE>
+ give this to you.<WAIT>
+
+<SET_FLAG><$01><$63><SET_FLAG><$00><$25> Bomberman got the<LINE>
+ Balloon!<SFX><$0C><WAIT>
+
+ This balloon is a synthesis material<LINE>
+ for making new bombs.<WAIT>
+
+ Please use it in your<LINE>
+ upcoming battles.<WAIT>
+
+ Earlier, one of the 4 Sages serving<LINE>
+ Queen Emeralda...<WAIT>
+
+ Bomb Master, returned and left a<LINE>
+ message for you.<WAIT>
+
+ I will relay it to you now.<WAIT>
+
+ "...We 4 Sages obtained some information<LINE>
+ one day on how to defeat...<WAIT>
+
+ the Dastardly Bombers.<WAIT>
+
+ The truth is, there is a Karabon<LINE>
+ that each of them is weak against.<WAIT>
+
+ ...Based on that information, we<LINE>
+ scattered across the land...<WAIT>
+
+ and took the Karabons we found<LINE>
+ to their respective fortresses.<WAIT>
+
+ However, that was false information<LINE>
+ spread by Phantom Bomber...<WAIT>
+
+ As a result, we ended up helping them<LINE>
+ gather the very Karabons...<WAIT>
+
+ that power them up...<LINE>
+ I am deeply ashamed...<WAIT>
+
+ ...That concludes the message.<LINE>
+ ...Did I sound like him?<END>
+
+
+//POINTER #28 @ $1CF778 - STRING #28 @ $1CE0A3
+
+#WRITE(GBA,$1CF778)
+ The day that meteorite fell,<LINE>
+ the Sky Castle Fantasy...<WAIT>
+
+ was taken down by the<LINE>
+ 5 Dastardly Bombers.<WAIT>
+
+ We somehow managed to escape through<LINE>
+ the Road to the Sky in the desert...<WAIT>
+
+ and to prevent them from following us,<LINE>
+ we removed the Medallions and sealed it.<WAIT>
+
+ But the desert had already<LINE>
+ fallen into their hands...<WAIT>
+
+ and during the battle, the 4 Medallions<LINE>
+ were stolen by the enemy.<WAIT>
+
+ So we moved here to the Fairy Palace,<LINE>
+ which we used when...<WAIT>
+
+ something similar happened<LINE>
+ several years ago.<WAIT>
+
+ But they were already a step ahead<LINE>
+ of us even here... that tower.<WAIT>
+
+ In the end, we were effectively<LINE>
+ trapped here...<WAIT>
+
+ and during that time, they did<LINE>
+ whatever they pleased... I am ashamed.<WAIT>
+
+ As long as there are still many<LINE>
+ monsters on the surface...<WAIT>
+
+ we cannot leave the surface.<WAIT>
+
+ I'm sorry to ask this of you, but we need<LINE>
+ you to take back Fantasy.<WAIT>
+
+ ...I'm counting on you.<END>
+
+
+//POINTER #29 @ $1CF77C - STRING #29 @ $1CE286
+
+#WRITE(GBA,$1CF77C)
+ Are you Bomberman...?<LINE>
+ It is a pleasure to meet you.<WAIT>
+
+ I am the Queen of this planet,<LINE>
+ Emeralda.<WAIT>
+
+ I hear you have been helping people<LINE>
+ in various places...<WAIT>
+
+ Thank you, truly.<WAIT>
+
+ As we were in such a state until just a<LINE>
+ moment ago...<WAIT>
+
+ I cannot offer much of a reward, but...<WAIT>
+
+ Please take this Karabon with you.<LINE>
+ I'm sure it will be of help.<END>
+
+
+//POINTER #30 @ $1CF780 - STRING #30 @ $1CE346
+
+#WRITE(GBA,$1CF780)
+ I am Youno.<LINE>
+ Pleased to meet you...<WAIT>
+
+ Karabon Youno<LINE>
+ joined your team!<SFX><$0C><WAIT>
+
+ My ability is<LINE>
+ Wind Creation.<WAIT>
+
+ If you equip me, I can<LINE>
+ calm down tornadoes.<WAIT>
+
+ Do you want to set me to the B Button?<LINE>
+  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$09><$39><$09><$3A> ...! Isn't that...<LINE>
+ a Medallion! ...Where did you get it?<WAIT>
+
+ ...I see.<LINE>
+ ...The truth is, those Medallions...<WAIT>
+
+ are the keys to opening the<LINE>
+ Road to the Sky.<WAIT>
+
+ I beg of you! Could you please<LINE>
+ recover all the Medallions?<WAIT>
+
+ If you gather them all, we might be able<LINE>
+ to take back Fantasy...<WAIT>
+
+ which was stolen by the enemy.<WAIT>
+
+ There are 4 Medallions in total,<LINE>
+ so there is 1 left...<WAIT>
+
+ I believe it is likely somewhere<LINE>
+ in the volcano.<WAIT>
+
+ I will open the gate to the desert<LINE>
+ that we used...<WAIT>
+
+ when we fled from the sky to here.<WAIT>
+
+ It is located near North Epsilon.<LINE>
+ You should recognize it immediately.<WAIT>
+
+ Please head to the volcano from there.<LINE>
+ Well then, please be careful...<END>
+
+
+//POINTER #31 @ $1CF784 - STRING #31 @ $1CE3D4
+
+#WRITE(GBA,$1CF784)
+ ...! Isn't that...<LINE>
+ a Medallion! ...Where did you get it?<WAIT>
+
+ ...I see.<LINE>
+ ...The truth is, those Medallions...<WAIT>
+
+ are the keys to opening the<LINE>
+ Road to the Sky.<WAIT>
+
+ I beg of you! Could you please<LINE>
+ recover all the Medallions?<WAIT>
+
+ If you gather them all, we might be able<LINE>
+ to take back Fantasy...<WAIT>
+
+ which was stolen by the enemy.<WAIT>
+
+ There are 4 Medallions in total,<LINE>
+ so there is 1 left...<WAIT>
+
+ I believe it is likely somewhere<LINE>
+ in the volcano.<WAIT>
+
+ I will open the gate to the desert<LINE>
+ that we used...<WAIT>
+
+ when we fled from the sky to here.<WAIT>
+
+ It is located near North Epsilon.<LINE>
+ You should recognize it immediately.<WAIT>
+
+ Please head to the volcano from there.<LINE>
+ Well then, please be careful...<END>
+
+
+//POINTER #32 @ $1CF788 - STRING #32 @ $1CE548
+
+#WRITE(GBA,$1CF788)
+ Yay! It's a Frozen Flower~<LINE>
+ Munch munch munch...<END>
+
+
+//POINTER #33 @ $1CF78C - STRING #33 @ $1CE563
+
+#WRITE(GBA,$1CF78C)
+ Welcome, Bomberman.<LINE>
+ I am the one known as Boo!<WAIT>
+
+ Unless you retrieve the Medallion in the<LINE>
+ back of the boss's room...<WAIT>
+
+ I cannot escape from here...<WAIT>
+
+ Listen closely... To open the door to the<LINE>
+ boss's room in this fortress...<WAIT>
+
+ you need a Karabon created by<LINE>
+ synthesizing Beast Pommy and Dorako!<WAIT>
+
+ Karabons can be synthesized using a<LINE>
+ Karabon Synthesis Machine.<WAIT>
+
+ There should be a Karabon Synthesis<LINE>
+ Machine somewhere in this fortress!<WAIT>
+
+ The base for the synthesis, Dorako,<LINE>
+ is right here.<WAIT>
+
+ Take him with you.<END>
+
+
+//POINTER #34 @ $1CF790 - STRING #34 @ $1CE678
+
+#WRITE(GBA,$1CF790)
+ Unless you retrieve the Medallion in the<LINE>
+ back of the boss's room...<WAIT>
+
+ I cannot escape from here...<WAIT>
+
+ Listen closely... To open the door to the<LINE>
+ boss's room in this fortress...<WAIT>
+
+ you need a Karabon created by<LINE>
+ synthesizing Beast Pommy and Dorako!<WAIT>
+
+ Karabons can be synthesized using a<LINE>
+ Karabon Synthesis Machine.<WAIT>
+
+ There should be a Karabon Synthesis<LINE>
+ Machine somewhere in this fortress!<WAIT>
+
+ Somehow find the machine and<LINE>
+ synthesize the Karabon!<WAIT>
+
+ Also, the stairs leading to the 3rd floor<LINE>
+ are hidden by a mysterious power.<WAIT>
+
+ But if you borrow the power of a Karabon<LINE>
+ that can uncover hidden things...<WAIT>
+
+ the path will surely<LINE>
+ open for you!<END>
+
+
+//POINTER #35 @ $1CF794 - STRING #35 @ $1CE7D3
+
+#WRITE(GBA,$1CF794)
+ Welcome, Bomberman... It's quite<LINE>
+ impressive you made it this far.<WAIT>
+
+ Are you looking for Max?<LINE>
+ If so, you're too late. Give it up!<WAIT>
+
+ Hehehe... You think you can win? How naive.<LINE>
+ I'm not the same as I used to be!<WAIT>
+
+ Pommy Dragon! Your power...<WAIT>
+
+ I, Plasma Bomber,<LINE>
+ will take it for myself!!<END>
+
+
+//POINTER #36 @ $1CF798 - STRING #36 @ $1CE86A
+
+#WRITE(GBA,$1CF798)
+ I've been waiting for you, Bomberman...<WAIT>
+
+ With this, the ice on the Fairy Palace<LINE>
+ should melt, too...<WAIT>
+
+ This is the Love Medallion that was<LINE>
+ sealed here... Take it.<END>
+
+
+//POINTER #37 @ $1CF79C - STRING #37 @ $1CE8C0
+
+#WRITE(GBA,$1CF79C)
+ Hehehe... I'm Dorako! So you're Bomberman.<LINE>
+ I've heard the rumors about you.<WAIT>
+
+ Well, I'm counting on ya!<WAIT>
+
+ Karabon Dorako<LINE>
+ joined your team!<SFX><$0C><WAIT>
+
+ My ability is<LINE>
+ Light!<WAIT>
+
+ Equip me, and I'll brightly light up<LINE>
+ even the darkest rooms!<WAIT>
+
+ Do you want to set me to the B Button?<LINE>
+  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$09><$26><$09><$27><EQUIP_KARABON><$0E><CLOSE>
+
+
+//POINTER #38 @ $1CF7A0 - STRING #38 @ $1CE964
+
+#WRITE(GBA,$1CF7A0)
+<EQUIP_KARABON><$0E><CLOSE>
+
+
+//POINTER #39 @ $1CF7A4 - STRING #39 @ $1CE967
+
+#WRITE(GBA,$1CF7A4)
+<CLOSE>
+
+
+//POINTER #40 @ $1CF7A8 - STRING #40 @ $1CE968
+
+#WRITE(GBA,$1CF7A8)
+ Well then, I'm counting on you.<END>
+
+
+//POINTER #41 @ $1CF7AC - STRING #41 @ $1CE974
+
+#WRITE(GBA,$1CF7AC)
+ Thanks for earlier.<END>
+
+
+//POINTER #42 @ $1CF7B0 - STRING #42 @ $1CE981
+
+#WRITE(GBA,$1CF7B0)
+ Cold again today, isn't it.<END>
+
+
+//POINTER #43 @ $1CF7B4 - STRING #43 @ $1CE98D
+
+#WRITE(GBA,$1CF7B4)
+ Is Kin doing well?<END>
+
+
+//POINTER #44 @ $1CF7B8 - STRING #44 @ $1CE99E
+
+#WRITE(GBA,$1CF7B8)
+ Gau? It got awfully cold while<LINE>
+ I was sleeping gau... Why is that gau?<END>
+
+
+//POINTER #45 @ $1CF7BC - STRING #45 @ $1CE9C1
+
+#WRITE(GBA,$1CF7BC)
+<SET_FLAG><$01><$44> ...I see, so that's what happened gau...<WAIT>
+
+ If that's the case, this Beast Pommy<LINE>
+ will lend you a hand gau~!<WAIT>
+
+ Karabon Beast Pommy<LINE>
+ joined your team!<SFX><$0C><WAIT>
+
+ My ability is<LINE>
+ Mid-Air Movement gau!<WAIT>
+
+ Equip me, and you can fly right<LINE>
+ over cliffs and stuff gau!<WAIT>
+
+ Do you want to set me to the B Button gau?<LINE>
+  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$09><$2E><$09><$2F><EQUIP_KARABON><$0C><CLOSE>
+
+
+//POINTER #46 @ $1CF7C0 - STRING #46 @ $1CEA71
+
+#WRITE(GBA,$1CF7C0)
+<EQUIP_KARABON><$0C><CLOSE>
+
+
+//POINTER #47 @ $1CF7C4 - STRING #47 @ $1CEA74
+
+#WRITE(GBA,$1CF7C4)
+<CLOSE>
+
+
+//POINTER #48 @ $1CF7C8 - STRING #48 @ $1CEA75
+
+#WRITE(GBA,$1CF7C8)
+ If you go north from here,<LINE>
+ you'll find North Epsilon.<WAIT>
+
+ But the area around the entrance<LINE>
+ to the town of North Epsilon...<WAIT>
+
+ is protected by regenerating<LINE>
+ snowman traps...<WAIT>
+
+ and if you clumsily try to enter,<LINE>
+ you'll get trapped.<WAIT>
+
+ You should use Strong's ability,<LINE>
+ Bomb Throw, to toss bombs in.<WAIT>
+
+ If you get completely stuck, it would<LINE>
+ be best to use Pommy's Teleport...<WAIT>
+
+ to return to South Epsilon<LINE>
+ and start over.<WAIT>
+
+ As a hint, I think it's best to enter<LINE>
+ from the right side.<END>
+
+
+//POINTER #49 @ $1CF7CC - STRING #49 @ $1CEB6F
+
+#WRITE(GBA,$1CF7CC)
+ You can't ride the moving floors<LINE>
+ unless you stop them first.<WAIT>
+
+ The switch to stop them<LINE>
+ should be near the floor.<WAIT>
+
+ You can't step on this switch,<LINE>
+ so hit it with a bomb blast.<END>
+
+
+//POINTER #50 @ $1CF7D0 - STRING #50 @ $1CEBC2
+
+#WRITE(GBA,$1CF7D0)
+ Oh, did you by any chance<LINE>
+ come from across the cliff?<WAIT>
+
+ Huh? You made it so I can cross?<LINE>
+ Oh, that's a lifesaver!<WAIT>
+
+ Actually, my fiance went towards the sea<LINE>
+ and hasn't come back...<WAIT>
+
+ so I was going to go pick him up, but<LINE>
+ that cliff was holding me back.<WAIT>
+
+ If there's anything I can do to help,<LINE>
+ just tell me.<WAIT>
+
+ Huh? Have I seen Max?<LINE>
+ ...Ah! Are you talking about that guy?<WAIT>
+
+ Two towers side-by-side were<LINE>
+ recently built to the north of here.<WAIT>
+
+ Someone like that asked me<LINE>
+ how to get there.<WAIT>
+
+ You can only get there from the<LINE>
+ west side of the Fairy Palace.<WAIT>
+
+ Anyway, if you go to South Epsilon,<LINE>
+ you might be able to figure it out.<WAIT>
+
+ Well then, I'm praying you can safely<LINE>
+ meet Mr. Max.<END>
+
+
+//POINTER #51 @ $1CF7D4 - STRING #51 @ $1CED37
+
+#WRITE(GBA,$1CF7D4)
+ If you walk east along the cliff here,<LINE>
+ there's a hot spring.<WAIT>
+
+ Beyond the ice wall on the north side<LINE>
+ of the path along the cliff...<WAIT>
+
+ is the castle town of South Epsilon!<WAIT>
+
+ Ah! If you go towards the hot spring,<LINE>
+ there's no entrance to the town, you know!<WAIT>
+
+ If you want to enter the town, go the<LINE>
+ opposite direction of the hot spring.<END>
+
+
+//POINTER #52 @ $1CF7D8 - STRING #52 @ $1CEDD6
+
+#WRITE(GBA,$1CF7D8)
+<JUMP_FLAG_SET><$01><$4B><$09><$48> Maybe because it's been so cold lately,<LINE>
+ the ground cracked open.<WAIT>
+
+ Now we can't get to the castle town<LINE>
+ of Epsilon from here anymore.<WAIT>
+
+ If you go west along the cliff, there's a<LINE>
+ place where we could build a bridge, but...<WAIT>
+
+ those weird guys on the other side of<LINE>
+ the cliff keep getting in the way.<WAIT>
+
+ I wonder if someone could go<LINE>
+ beat them up...<END>
+
+
+//POINTER #53 @ $1CF7DC - STRING #53 @ $1CEE7E
+
+#WRITE(GBA,$1CF7DC)
+<JUMP_FLAG_SET><$01><$47><$09><$49> There are some suspicious guys<LINE>
+ gathering up ahead, doing something.<WAIT>
+
+ I heard "kaboom" sounds and<LINE>
+ the cries of Karabons.<END>
+
+
+//POINTER #54 @ $1CF7E0 - STRING #54 @ $1CEECB
+
+#WRITE(GBA,$1CF7E0)
+<EQUIP_KARABON><$0B><CLOSE>
+
+
+//POINTER #55 @ $1CF7E4 - STRING #55 @ $1CEECE
+
+#WRITE(GBA,$1CF7E4)
+<CLOSE>
+
+
+//POINTER #56 @ $1CF7E8 - STRING #56 @ $1CEECF
+
+#WRITE(GBA,$1CF7E8)
+<JUMP_FLAG_SET><$01><$56><$09><$4B> There are 4 Medallions in total,<LINE>
+ so there is 1 left...<WAIT>
+
+ I believe it is likely somewhere<LINE>
+ in the volcano.<WAIT>
+
+ I will open the gate to the desert<LINE>
+ that we used...<WAIT>
+
+ when we fled from the sky to here.<WAIT>
+
+ It is located near North Epsilon.<LINE>
+ You should recognize it immediately.<WAIT>
+
+ Please head to the volcano from there.<LINE>
+ Well then, please be careful...<END>
+
+
+//POINTER #57 @ $1CF7EC - STRING #57 @ $1CEF98
+
+#WRITE(GBA,$1CF7EC)
+<EQUIP_KARABON><$10><CLOSE>
+
+
+//POINTER #58 @ $1CF7F0 - STRING #58 @ $1CEF9B
+
+#WRITE(GBA,$1CF7F0)
+<CLOSE>
+
+
+//POINTER #59 @ $1CF7F4 - STRING #59 @ $1CEF9C
+
+#WRITE(GBA,$1CF7F4)
+<SET_FLAG><$00><$34> Bomberman got the<LINE>
+ Frozen Flower!<SFX><$0C><END>
+
+
+//POINTER #60 @ $1CF7F8 - STRING #60 @ $1CEFBD
+
+#WRITE(GBA,$1CF7F8)
+ Phaa, that was delicious!<LINE>
+ ...Huh? It was your flower?<WAIT>
+
+ ...I'm sorry... I haven't eaten<LINE>
+ one of these lately...<WAIT>
+
+ ...Huh? You forgive me?<LINE>
+ Thank you! You're so nice!<WAIT>
+
+ It's not much of an apology, but<LINE>
+ I'll help you out from now on.<WAIT>
+
+ I'm Pteradon.<LINE>
+ Glad to be working with you.<WAIT>
+
+ Karabon Pteradon<LINE>
+ joined your team!<SFX><$0C><WAIT>
+
+ My ability is<LINE>
+ Firepower Down.<WAIT>
+
+ Equip me, and bomb blasts get<LINE>
+ 1 level smaller.<WAIT>
+
+ Do you want to set me to the B Button?<LINE>
+  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$09><$3D><$09><$3E><EQUIP_KARABON><$0D><CLOSE>
+
+
+//POINTER #61 @ $1CF7FC - STRING #61 @ $1CF0D9
+
+#WRITE(GBA,$1CF7FC)
+<EQUIP_KARABON><$0D><CLOSE>
+
+
+//POINTER #62 @ $1CF800 - STRING #62 @ $1CF0DC
+
+#WRITE(GBA,$1CF800)
+<CLOSE>
+
+
+//POINTER #63 @ $1CF804 - STRING #63 @ $1CF0DD
+
+#WRITE(GBA,$1CF804)
+ South Epsilon ahead.<LINE>
+ North Epsilon further ahead.<END>
+
+
+//POINTER #64 @ $1CF808 - STRING #64 @ $1CF0FE
+
+#WRITE(GBA,$1CF808)
+ Welcome to South Epsilon!<WAIT>
+
+ Those heading to the Fairy Palace,<LINE>
+ please cross the bridge nearby.<END>
+
+
+//POINTER #65 @ $1CF80C - STRING #65 @ $1CF135
+
+#WRITE(GBA,$1CF80C)
+ Welcome to North Epsilon!<END>
+
+
+//POINTER #66 @ $1CF810 - STRING #66 @ $1CF145
+
+#WRITE(GBA,$1CF810)
+ Earlier, one of the 4 Sages serving<LINE>
+ Queen Emeralda...<WAIT>
+
+ Master Boo, returned and left a<LINE>
+ message for you.<WAIT>
+
+ I will relay it to you now.<WAIT>
+
+ "...We 4 Sages obtained some information<LINE>
+ one day on how to defeat...<WAIT>
+
+ the Dastardly Bombers.<WAIT>
+
+ The truth is, there is a Karabon<LINE>
+ that each of them is weak against.<WAIT>
+
+ ...Based on that information, we<LINE>
+ scattered across the land...<WAIT>
+
+ and took the Karabons we found<LINE>
+ to their respective fortresses.<WAIT>
+
+ However, that was false information<LINE>
+ spread by Phantom Bomber...<WAIT>
+
+ As a result, we ended up helping them<LINE>
+ gather the very Karabons...<WAIT>
+
+ that power them up...<LINE>
+ I am deeply ashamed...<WAIT>
+
+ ...That concludes the message.<LINE>
+ ...Did I sound like him?<END>
+
+
+//POINTER #67 @ $1CF814 - STRING #67 @ $1CF2CA
+
+#WRITE(GBA,$1CF814)
+<SFX><$4C> Bomberman got the<LINE>
+ Love Medallion!<WAIT>
+
+ Bomberman's max hearts<LINE>
+ increased by 1!<END>
+
+
+//POINTER #68 @ $1CF818 - STRING #68 @ $1CF304
+
+#WRITE(GBA,$1CF818)
+ I can clearly see where you are<LINE>
+ from where I am now.<WAIT>
+
+ And where you should go next, too.<LINE>
+ Yes...<WAIT>
+
+ At the place where the one who once<LINE>
+ ruled this planet...<WAIT>
+
+ watched over everything...<LINE>
+ I am waiting.<WAIT>
+
+ Hurry and come here too...<LINE>
+ ...I'll be waiting.<END>
+
+
+//POINTER #69 @ $1CF81C - STRING #69 @ $1CF38E
+
+#WRITE(GBA,$1CF81C)
+ Huh? You want to go to the castle...?<LINE>
+ That's impossible, no way, no how!<WAIT>
+
+ The bridge to the castle froze over<LINE>
+ and collapsed, you see.<WAIT>
+
+ Right now, the only thing that can go<LINE>
+ back and forth to the castle is...<WAIT>
+
+ something like a Beast Pommy that can<LINE>
+ fly right over that cliff!<END>
+
+
+//POINTER #70 @ $1CF820 - STRING #70 @ $1CF416
+
+#WRITE(GBA,$1CF820)
+ Look, look! The ice on the<LINE>
+ castle melted!<END>
+
+
+//POINTER #71 @ $1CF824 - STRING #71 @ $1CF430
+
+#WRITE(GBA,$1CF824)
+ Oh, youngster!<LINE>
+ Is this your first time around here?<WAIT>
+
+ If you come here, you simply must<LINE>
+ visit the hot spring!<WAIT>
+
+ Well, it's in a place that's a bit<LINE>
+ hard to find, though.<WAIT>
+
+ If you spotted it on your way here,<LINE>
+ you're quite lucky.<WAIT>
+
+ Oh! You already went in?<LINE>
+ Impressive.<WAIT>
+
+ The water in that hot spring was<LINE>
+ quite a nice temperature, wasn't it.<END>
+
+
+//POINTER #72 @ $1CF828 - STRING #72 @ $1CF4D4
+
+#WRITE(GBA,$1CF828)
+ Looks like there was a pretty<LINE>
+ flashy avalanche.<WAIT>
+
+ We could hear an incredibly loud noise<LINE>
+ even all the way over here...<WAIT>
+
+ ...Huh!? The cliff was filled in<LINE>
+ by the avalanche just now!?<WAIT>
+
+ And those weird guys by the cliff<LINE>
+ are gone too?<WAIT>
+
+ That's a huge help!<LINE>
+ I have to let everyone know!<END>
+
+
+//POINTER #73 @ $1CF82C - STRING #73 @ $1CF55E
+
+#WRITE(GBA,$1CF82C)
+ There are some suspicious guys<LINE>
+ gathering up ahead, doing something.<WAIT>
+
+ I heard "kaboom" sounds and<LINE>
+ the cries of Karabons.<WAIT>
+
+ But it suddenly got quiet,<LINE>
+ didn't it...<WAIT>
+
+ Oh, did you quiet them down?<LINE>
+ Thank you, that's a big help.<END>
+
+
+//POINTER #74 @ $1CF830 - STRING #74 @ $1CF5E3
+
+#WRITE(GBA,$1CF830)
+ Hello. It's cold again today, isn't it.<WAIT>
+
+ Come to think of it, there's a flower<LINE>
+ around here called the Frozen Flower...<WAIT>
+
+ It blooms nearby, but have<LINE>
+ you seen it yet?<WAIT>
+
+ ...Huh? You have a Frozen Flower?<LINE>
+ Show me, show me!<WAIT>
+
+ Oh my... one of the petals<LINE>
+ has been eaten...<WAIT>
+
+ But finding one that only has that much<LINE>
+ damage is lucky in a way.<END>
+
+
+//POINTER #75 @ $1CF834 - STRING #75 @ $1CF699
+
+#WRITE(GBA,$1CF834)
+ You've finally gathered all the<LINE>
+ Medallions.<WAIT>
+
+ With those 4 Medallions, you should<LINE>
+ be able to go to Fantasy.<WAIT>
+
+ Please take back<LINE>
+ Fantasy.<WAIT>
+
+ I leave it in your hands...<END>
