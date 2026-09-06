@@ -22,534 +22,695 @@
 //POINTER #0 @ $1D29C0 - STRING #0 @ $1CF838
 
 #WRITE(GBA,$1D29C0)
- Please leave this place to me.<END>
+ Leave it to me!<END>
 
 
 //POINTER #1 @ $1D29C4 - STRING #1 @ $1CF84B
 
 #WRITE(GBA,$1D29C4)
-<JUMP_FLAG_SET><$01><$56><$0A><$6D> You sure came a long way<LINE> to get to a place like this...<WAIT>
+<JUMP_FLAG_SET><$01><$56><$0A><$6D> How did you get<LINE>
+ this far?<WAIT>
 
- As you can see, we're in trouble<LINE> because the volcano erupted.<WAIT>
+ The eruptions made<LINE>
+ a wreck of here!<WAIT>
 
- It hadn't erupted in decades,<LINE> so we thought it was safe...<WAIT>
+ We thought it was<LINE>
+ safe, but a year<WAIT>
 
- But a year ago, a meteorite fell into<LINE> the crater... resulting in this mess.<WAIT>
+ ago, a meteor fell<LINE>
+ in the crater...<WAIT>
 
- Come to think of it, I wonder if Queen<LINE> Emeralda reached the Fairy Palace safely.<WAIT>
+ Oh, did Emeralda<LINE>
+ get to the Palace?<WAIT>
 
- Because of times like these, I really<LINE> hope she's doing well...<END>
+ I hope she's Ok!<END>
 
 
 //POINTER #2 @ $1D29C8 - STRING #2 @ $1CF91A
 
 #WRITE(GBA,$1D29C8)
-<JUMP_FLAG_SET><$01><$56><$0A><$6E> Maybe this town is in a bad spot,<LINE> because volcanic bombs often fall here.<WAIT>
+<JUMP_FLAG_CLEAR><$02><$56><$0A><$6E> A lot of volcanic<LINE>
+ bombs fly around.<WAIT>
 
- They hurt if they hit you,<LINE> so be careful when walking around.<WAIT>
+ They hurt when<LINE>
+ they hit you!<WAIT>
 
- Well, someone like me can just look at<LINE> the shadows and dodge 'em easily, though.<END>
+ Watch the shadows<LINE>
+ and dodge!<END>
 
 
 //POINTER #3 @ $1D29CC - STRING #3 @ $1CF981
 
 #WRITE(GBA,$1D29CC)
-<JUMP_FLAG_SET><$01><$67><$0A><$07><JUMP_FLAG_SET><$01><$66><$0A><$04> Well hello there! Do you<LINE> take good care of your health?<WAIT>
+<JUMP_FLAG_SET><$01><$67><$0A><$07><JUMP_FLAG_SET><$01><$66><$0A><$04> Hi! Do you watch<LINE>
+ your weight?<WAIT>
 
- I care deeply about my health, so<LINE> I've been trying out various things.<WAIT>
+ I have tried lots<LINE>
+ of things.<WAIT>
 
- And my favorite thing<LINE> lately is this!<WAIT>
+ My favorite right<LINE>
+ now is this...<WAIT>
 
- The Teku Teku Angel!<WAIT>
+ A Step Counter!<WAIT>
 
- What? You're asking what the<LINE> Teku Teku Angel is... you say?<WAIT>
+ You've never heard<LINE>
+ of one?<WAIT>
 
- Indeed, it is a pedometer that<LINE> lets you have fun while walking!<WAIT>
+ It makes walking<LINE>
+ much more fun!<WAIT>
 
- Here, take a look. Just 100 more steps<LINE> and I will achieve 1,000,000 steps!<WAIT>
+ Only 100 more<LINE>
+ to a million!<WAIT>
 
- ...However... even I cannot defeat<LINE> the physical toll of old age...<WAIT>
+ I'm old, though<LINE>
+ and my doc.<WAIT>
 
- and my doctor finally ordered<LINE> me to stop.<WAIT>
+ told me to stop<LINE>
+ walking for now.<WAIT>
 
- ...But I just can't bring<LINE> myself to give up on it...<WAIT>
+ ...but I can't<LINE>
+ give it up!<WAIT>
 
- I have a favor to ask of you! Could you<LINE> take this Teku Teku Angel...<WAIT>
+ Could you walk the<LINE>
+ last 100 steps<WAIT>
 
- and walk the remaining<LINE> 100 steps for me?<WAIT>
+ in my place?<WAIT>
 
- ....................................<LINE>
- ....................................<WAIT>
+ ....................<LINE>
+ ....................<WAIT>
 
- ...Really!? Thank you!<LINE> I'm counting on you, then.<WAIT>
+ You would?<LINE>
+ Oh, Thank you!<WAIT>
 
- Bomberman got the<LINE> Teku Teku Angel!<SET_FLAG><$01><$66><SET_FLAG><$00><$38><SFX><$0C><END>
+ Bomberman gets the<LINE>
+ Step Counter.<SET_FLAG><$01><$66><SET_FLAG><$00><$38><SFX><$0C><END>
 
 
 //POINTER #4 @ $1D29D0 - STRING #4 @ $1CFB62
 
 #WRITE(GBA,$1D29D0)
-<JUMP_FLAG_SET><$00><$EC><$0A><$05> ...Looks like you still haven't<LINE> quite reached 1,000,000 steps...<WAIT>
+<JUMP_FLAG_SET><$00><$EC><$0A><$05> ...not at a<LINE>
+ million yet!<WAIT>
 
- Keep trying a little more!<LINE> You can do it!<END>
+ You're close!<LINE>
+ Keep trying!<END>
 
 
 //POINTER #5 @ $1D29D4 - STRING #5 @ $1CFBA1
 
 #WRITE(GBA,$1D29D4)
-<SET_FLAG><$01><$67><CLEAR_FLAG><$00><$38> Ohhh! You finally did it!<LINE> Bravo!<WAIT>
+<SET_FLAG><$01><$67><CLEAR_FLAG><$00><$38> You made it!<LINE>
+ Bravo!!<WAIT>
 
- Well then, please hand over<LINE> the Teku Teku Angel.<WAIT>
+ Can I have it back<LINE>
+ now?<WAIT>
 
- Bomberman handed over<LINE> the Teku Teku Angel.<SFX><$0C><WAIT>
+ Bomberman returns<LINE>
+ the Step Counter.<SFX><$0C><WAIT>
 
- With this, a heavy burden has<LINE> finally been lifted from my chest.<WAIT>
+ I feel much better<LINE>
+ now!<WAIT>
 
- I will give you this Karabon as a reward!<LINE> Please take good care of it!<END>
+ Take this Karabon<LINE>
+ as thanks!<END>
 
 
 //POINTER #6 @ $1D29D8 - STRING #6 @ $1CFC38
 
 #WRITE(GBA,$1D29D8)
- Thanks for listening to<LINE> an old man's request!<WAIT>
+ Thanks for helping<LINE>
+ this old man out!<WAIT>
 
- I'm Sea Balloon.<LINE> Nice to meet ya.<WAIT>
+ I'm Sibaloon! How<LINE>
+ do you do?<WAIT>
 
- Karabon Sea Balloon<LINE> joined your team!<SFX><$0C><WAIT>
+ Karabon Sibaloon<LINE>
+ joined forces.<SFX><$0C><WAIT>
 
- My ability is<LINE> Rainbow Bridge!<WAIT>
+ My ability is the<LINE>
+ Rainbow Bridge!<WAIT>
 
- If you equip me, I can help you cross<LINE> gaps that are 1 tile wide.<WAIT>
+ I can make a 1<LINE>
+ grid bridge!<WAIT>
 
- Do you want to set me to the B Button?<LINE>
-  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$0A><$67><$0A><$68> Oh, it's you! Listen to this!<LINE> When I went to the doctor...<WAIT>
+ Do you want to set<WAIT>
 
- He said if I take it easy for a while,<LINE> I can start walking again!<WAIT>
+ me now?<LINE>
+  yes  no<PROMPT_SWAP_NO><$01><$02><$06><$02><$0A><$67><$0A><$68> Oh! The doctor<LINE>
+ said I can<WAIT>
 
- Next time, I'm going to reach 2,000,000<LINE> steps all by myself! I can't wait!<END>
+ start walking<LINE>
+ again soon...<WAIT>
+
+ I bet I can make<LINE>
+ 2 million!<END>
 
 
 //POINTER #7 @ $1D29DC - STRING #7 @ $1CFCEA
 
 #WRITE(GBA,$1D29DC)
- Oh, it's you! Listen to this!<LINE> When I went to the doctor...<WAIT>
+ Oh! The doctor<LINE>
+ said I can<WAIT>
 
- He said if I take it easy for a while,<LINE> I can start walking again!<WAIT>
+ start walking<LINE>
+ again soon...<WAIT>
 
- Next time, I'm going to reach 2,000,000<LINE> steps all by myself! I can't wait!<END>
+ I bet I can make<LINE>
+ 2 million!<END>
 
 
 //POINTER #8 @ $1D29E0 - STRING #8 @ $1CFD54
 
 #WRITE(GBA,$1D29E0)
- Myumyu~ Thanks for saving me myu~<WAIT>
+ I'm saved!<WAIT>
 
- When those guys caught me, I<LINE> thought I was a goner myu~<WAIT>
+ I thought I was<LINE>
+ a goner!<WAIT>
 
- Myumyu~ You are my<LINE> lifesaver myu.<WAIT>
+ You saved my life!<WAIT>
 
- I'll follow you anywhere myu~<WAIT>
+ I'll follow you<LINE>
+ anywhere!<WAIT>
 
- Karabon Animal Pommy<LINE> joined your team!<SFX><$0C><WAIT>
+ Karabon P.Animal<LINE>
+ joined forces!<SFX><$0C><WAIT>
 
- My ability is<LINE> B Button Dash!<WAIT>
+ My ability is to<LINE>
+ dash!<WAIT>
 
- While you hold down the B Button,<LINE> you can move faster myu~<WAIT>
+ Hold <$AB> to move<LINE>
+ quickly.<WAIT>
 
- Do you want to set me to the B Button myu?<LINE>
-  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$0A><$28><$0A><$29><JUMP_FLAG_SET><$01><$4E><$0A><$0A> It's hot again today...<WAIT>
+ Do you want to set<WAIT>
 
- This place is closer to the volcano<LINE> than Zeta Town, after all...<WAIT>
+ me now?<LINE>
+  yes  no<PROMPT_SWAP_NO><$01><$02><$06><$02><$0A><$28><$0A><$29><JUMP_FLAG_SET><$01><$4E><$0A><$0A> It's hot today...<LINE>
+ Oh!<WAIT>
 
- Ugh... My throat is parched...<WAIT>
+ We're close to<LINE>
+ the volcano!<WAIT>
 
- It's still too early for the<LINE> rainmaking season, but...<WAIT>
+ Ahhh... I'm so<LINE>
+ thirsty!<WAIT>
 
- I wonder if Marine Eel's power<LINE> could do something about this...<END>
+ Still early for it<LINE>
+ to rain, though.<WAIT>
+
+ Maybe Unagi can<LINE>
+ help us!<END>
 
 
 //POINTER #9 @ $1D29E4 - STRING #9 @ $1CFE29
 
 #WRITE(GBA,$1D29E4)
-<JUMP_FLAG_SET><$01><$4E><$0A><$0A> It's hot again today...<WAIT>
+<JUMP_FLAG_SET><$01><$4E><$0A><$0A> It's hot today...<LINE>
+ Oh!<WAIT>
 
- This place is closer to the volcano<LINE> than Zeta Town, after all...<WAIT>
+ We're close to<LINE>
+ the volcano!<WAIT>
 
- Ugh... My throat is parched...<WAIT>
+ Ahhh... I'm so<LINE>
+ thirsty!<WAIT>
 
- It's still too early for the<LINE> rainmaking season, but...<WAIT>
+ Still early for it<LINE>
+ to rain, though.<WAIT>
 
- I wonder if Marine Eel's power<LINE> could do something about this...<END>
+ Maybe Unagi can<LINE>
+ help us!<END>
 
 
 //POINTER #10 @ $1D29E8 - STRING #10 @ $1CFEAB
 
 #WRITE(GBA,$1D29E8)
- Oh! It's raining! It's raining!<LINE> Thank goodness!<END>
+ Ahhh... Rain!<LINE>
+ I'm so relieved!<END>
 
 
 //POINTER #11 @ $1D29EC - STRING #11 @ $1CFEC8
 
 #WRITE(GBA,$1D29EC)
-<JUMP_FLAG_SET><$01><$4E><$0A><$0C> There's a giant desert<LINE> to the east of this town.<WAIT>
+<JUMP_FLAG_SET><$01><$4E><$0A><$0C> East lies a big<LINE>
+ desert.<WAIT>
 
- South of the desert, there's a cave<LINE> surrounded by quicksand.<WAIT>
+ South lies a cave<LINE>
+ and quicksand.<WAIT>
 
- If you go through there, you can get to<LINE> the water capital, Cosmos.<WAIT>
+ The cave leads to<LINE>
+ Omega.<WAIT>
 
- Once a year, we perform a rainmaking<LINE> ritual in this town.<WAIT>
+ We pray every year<LINE>
+ for rain, then<WAIT>
 
- When that time comes, we go to Cosmos<LINE> and call upon Master Marine Eel.<WAIT>
+ go to Omega and<LINE>
+ call for Unagi.<WAIT>
 
- I wish they'd stop being so stubborn<LINE> about it being the "wrong season" this year...<WAIT>
+ It's too early,<LINE>
+ but who cares?!<WAIT>
 
- and just hurry up, call him here, and<LINE> have him make it rain already...<END>
+ We need rain right<LINE>
+ now!<END>
 
 
 //POINTER #12 @ $1D29F0 - STRING #12 @ $1CFFBB
 
 #WRITE(GBA,$1D29F0)
- Did you see, did you see!? The top of<LINE> the volcano suddenly...<WAIT>
+ Did you see that?<LINE>
+ The volcano top<WAIT>
 
- Turned into a shape like a pyramid!<WAIT>
+ turned into a<LINE>
+ pyramid!<WAIT>
 
- It's amazing. I wonder what<LINE> kind of mechanism did that...<END>
+ What kinda trick<LINE>
+ is that?!<END>
 
 
 //POINTER #13 @ $1D29F4 - STRING #13 @ $1D000D
 
 #WRITE(GBA,$1D29F4)
-<JUMP_FLAG_SET><$01><$4E><$0A><$0E><JUMP_FULL_HEALTH><$0A><$70> Do you know this town's specialty?<WAIT>
+<JUMP_FLAG_SET><$01><$4E><$0A><$0E><JUMP_FULL_HEALTH><$0A><$70> What's this town<LINE>
+ famous for?<WAIT>
 
- The answer is delicious Teriyaki Beef.<LINE> It's got perfect flavor and portion size!<WAIT>
+ Teriyaki Beef,<LINE>
+ of course!<WAIT>
 
- You can only find it at the shop in this<LINE> town. How about some for a souvenir?<WAIT>
+ Only available<LINE>
+ here!<WAIT>
 
- ...Oh? Are you hurt?<LINE>
- ...Hold still for a second.♥<HEAL><SFX><$30><WAIT>
+ Are you hurt?<LINE>
+ Hold still...<HEAL><SFX><$30><WAIT>
 
- There, all better! Be careful not to<LINE> get yourself hurt too much, okay?♥<END>
+ There, be careful<LINE>
+ out there, ok?<END>
 
 
 //POINTER #14 @ $1D29F8 - STRING #14 @ $1D00BA
 
 #WRITE(GBA,$1D29F8)
-<JUMP_FULL_HEALTH><$0A><$71> Speaking of which, do you<LINE> know about the Phantom Oasis?<WAIT>
+<JUMP_FULL_HEALTH><$0A><$71> Do you know of<LINE>
+ Phantom Oasis?<WAIT>
 
- I hear there's an oasis in the desert<LINE> that constantly moves around.<WAIT>
+ It's an oasis that<LINE>
+ actually moves!<WAIT>
 
- It disappears from where it just was,<LINE> and appears where it wasn't before.<WAIT>
+ Never in the same<LINE>
+ place!<WAIT>
 
- It sounds so mystical...<LINE> I'd love to see it for myself someday...<WAIT>
+ How mysterious!<WAIT>
 
- ...Oh? Are you hurt?<LINE>
- ...Hold still for a second.♥<HEAL><SFX><$30><WAIT>
+ Are you hurt?<LINE>
+ Hold still...<HEAL><SFX><$30><WAIT>
 
- There, all better! Be careful not to<LINE> get yourself hurt too much, okay?♥<END>
+ There, be careful<LINE>
+ out there, ok?<END>
 
 
 //POINTER #15 @ $1D29FC - STRING #15 @ $1D0191
 
 #WRITE(GBA,$1D29FC)
- Ugaga... So hungry...<LINE> Give me... Teri... Beef...<END>
+ I'm soooooooooooo<LINE>
+ hungry!<END>
 
 
 //POINTER #16 @ $1D2A00 - STRING #16 @ $1D01AE
 
 #WRITE(GBA,$1D2A00)
- Uga? Something smells good...<LINE> Are you going to give that to me?<WAIT>
+ Something smells<LINE>
+ good...<WAIT>
 
- Bomberman handed over<LINE> the Teriyaki Beef.<SFX><$0C><WAIT>
+ Bomberman hands<LINE>
+ over the T.Beef.<SFX><$0C><WAIT>
 
- Oooooh, thank you! You saved me!<LINE> Munch munch munch munch...<WAIT>
+ Mmmm...<LINE>
+ Delicious!<WAIT>
 
- ...Phew... To tell you the truth, I<LINE> actually lived near the volcano, but...<WAIT>
+ Ahh... I live near<LINE>
+ the volcano and<WAIT>
 
- after it erupted, all the food disappeared,<LINE> so I had no choice but to come down.<WAIT>
+ couldn't find any<LINE>
+ food after the<WAIT>
 
- But once I got this far, I was so hungry<LINE> I couldn't move anymore.<WAIT>
+ eruption. I was so<LINE>
+ hungry I couldn't<WAIT>
 
- ...You really saved me!<WAIT>
+ move!<LINE>
+ You saved me!<WAIT>
 
- Anyway, I'm still hungry, so<LINE> I'm going to go look for more food...<WAIT>
+ Still hungry, so<LINE>
+ I'd better go get<WAIT>
 
- See ya!<END>
+ some more!<LINE>
+ Bye!<END>
 
 
 //POINTER #17 @ $1D2A04 - STRING #17 @ $1D02B2
 
 #WRITE(GBA,$1D2A04)
- Hm? A guest, it's been a while...<LINE> Is it already the rainmaking season?<WAIT>
+ Haven't had a<LINE>
+ guest in ages!<WAIT>
 
- ...No, you are not from Eta Town.<LINE> Who are you?<WAIT>
+ You're not from<LINE>
+ Ita, are you?<WAIT>
 
- ....................................<LINE>
- ....................................<WAIT>
+ ....................<LINE>
+ ....................<WAIT>
 
- So you are called Bomberman.<LINE> I am Marine Eel.<WAIT>
+ You're Bomberman?<LINE>
+ I'm Unagi.<WAIT>
 
- I see... So that is what has been<LINE> happening on the outside...<WAIT>
+ Wow! Is it that bad<LINE>
+ out there?<WAIT>
 
- Then we must hurry... Let us go.<WAIT>
+ We gotta hurry!<LINE>
+ Let's go!<WAIT>
 
- Karabon Marine Eel<LINE> joined your team!<SFX><$0C><WAIT>
+ Karabon Unagi has<LINE>
+ joined forces.<SFX><$0C><WAIT>
 
- My ability is<LINE> Rainmaking.<WAIT>
+ I can make it<LINE>
+ rain!<WAIT>
 
- If you climb onto the altar in<LINE> Eta Town while I am equipped...<WAIT>
+ Climb into the<LINE>
+ altar with me<WAIT>
 
- I can summon the rain.<LINE> ...Though only once.<WAIT>
+ and it'll rain!<LINE>
+ Only once...<WAIT>
 
- Do you want to set me to the B Button?<LINE>
-  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$0A><$2B><$0A><$2C> Alright, I will summon the rain!<END>
+ Do you want to set<WAIT>
+
+ me now?<LINE>
+  yes  no<PROMPT_SWAP_NO><$01><$02><$06><$02><$0A><$2B><$0A><$2C> Ok! I'm gonna make<LINE>
+ it rain!<END>
 
 
 //POINTER #18 @ $1D2A08 - STRING #18 @ $1D0408
 
 #WRITE(GBA,$1D2A08)
- Alright, I will summon the rain!<END>
+ Ok! I'm gonna make<LINE>
+ it rain!<END>
 
 
 //POINTER #19 @ $1D2A0C - STRING #19 @ $1D0415
 
 #WRITE(GBA,$1D2A0C)
- Welcome, Bomberman.<LINE> I am the one known as Rao!<WAIT>
+ Hello!<LINE>
+ I am Rao!<WAIT>
 
- Unless you retrieve the Medallion in the<LINE> back of the boss's room...<WAIT>
+ I can't get outta<LINE>
+ here until I<WAIT>
 
- I cannot escape from here...<WAIT>
+ get the medal from<LINE>
+ the Boss' room!<WAIT>
 
- Listen closely... To open the door to the<LINE> boss's room in this fortress...<WAIT>
+ Listen, to open<LINE>
+ the Boss' door,<WAIT>
 
- you need a Karabon created by<LINE> synthesizing Marine Eel and Unikornes!<WAIT>
+ you need a Karabon<LINE>
+ fused from Unagi<WAIT>
 
- Karabons can be synthesized using a<LINE> Karabon Synthesis Machine.<WAIT>
+ and Youni.<WAIT>
 
- There should be a Karabon Synthesis<LINE> Machine somewhere in this fortress!<WAIT>
+ You can fuse 'em<LINE>
+ with SID.<WAIT>
 
- The base for the synthesis, Unikornes,<LINE> is right here.<WAIT>
+ SID is around here<LINE>
+ somewhere.<WAIT>
 
- Take him with you.<END>
+ Here's Youni.<LINE>
+ You'll need him.<END>
 
 
 //POINTER #20 @ $1D2A10 - STRING #20 @ $1D052F
 
 #WRITE(GBA,$1D2A10)
- Unless you retrieve the Medallion in the<LINE> back of the boss's room...<WAIT>
+ I can't get outta<LINE>
+ here until I<WAIT>
 
- I cannot escape from here...<WAIT>
+ get the medal from<LINE>
+ the Boss' room!<WAIT>
 
- Listen closely... To open the door to the<LINE> boss's room in this fortress...<WAIT>
+ Listen, to open<LINE>
+ the Boss' door,<WAIT>
 
- you need a Karabon created by<LINE> synthesizing Marine Eel and Unikornes!<WAIT>
+ you need a Karabon<LINE>
+ fused from Unagi<WAIT>
 
- Karabons can be synthesized using a<LINE> Karabon Synthesis Machine.<WAIT>
+ and Youni.<WAIT>
 
- There should be a Karabon Synthesis<LINE> Machine somewhere in this fortress!<WAIT>
+ You can fuse 'em<LINE>
+ with SID.<WAIT>
 
- Somehow find the machine and<LINE> synthesize the Karabon!<WAIT>
+ SID is around here<LINE>
+ somewhere.<WAIT>
 
- Also, Golem Bomber's room is<LINE> on the 1st floor, but...<WAIT>
+ With SID, you can<LINE>
+ fuse 2 Karabons.<WAIT>
 
- it's not connected to the other rooms,<LINE> so you can't enter it directly...<WAIT>
+ GolemBomber's room<LINE>
+ is on Floor 1.<WAIT>
 
- In that case, you have no choice but to<LINE> jump down from somewhere on the 2nd floor!<WAIT>
+ It's not connected<LINE>
+ with other rooms.<WAIT>
 
- Muster your courage and dive!<END>
+ You gotta jump in<LINE>
+ from above.<WAIT>
+
+ Don't look down!<END>
 
 
 //POINTER #21 @ $1D2A14 - STRING #21 @ $1D069D
 
 #WRITE(GBA,$1D2A14)
- I underestimated you, to think<LINE> you'd make it this far.<WAIT>
+ You've got some<LINE>
+ nerve coming here.<WAIT>
 
- Do you want to see Max that badly?<LINE> Are you that worried about him?<WAIT>
+ Wanna see Max,<LINE>
+ that bad?<WAIT>
 
- What do you even<LINE> know about Max?<WAIT>
+ What do you know<LINE>
+ about him?<WAIT>
 
- Are you looking for him because you know<LINE> what he really is?<WAIT>
+ Do you know who he<LINE>
+ really is?<WAIT>
 
- ...Well.<LINE> It's none of my concern.<WAIT>
+ Well... No concern<LINE>
+ of mine!<WAIT>
 
- It is your destiny<LINE> to be defeated here anyway.<WAIT>
+ You're fated to be<LINE>
+ destroyed here<WAIT>
 
- ...By me, the great Golem Bomber!<WAIT>
+ anyways... By me,<LINE>
+ GolemBomber!<WAIT>
 
- Sea Wing! I will take<LINE> your power!<END>
+ SeaWing! Your<LINE>
+ power is mine!<END>
 
 
 //POINTER #22 @ $1D2A18 - STRING #22 @ $1D0785
 
 #WRITE(GBA,$1D2A18)
- Well done, Bomberman...<WAIT>
+ Well done,<LINE>
+ Bomberman!<WAIT>
 
- It seems the volcano's activity<LINE> has completely subsided.<WAIT>
+ Volcanic activity<LINE>
+ has stopped!<WAIT>
 
- This is the Friendship Medallion that<LINE> was sealed here... Take it.<END>
+ Here is the Medal<LINE>
+ of Friendship!<END>
 
 
 //POINTER #23 @ $1D2A1C - STRING #23 @ $1D07D8
 
 #WRITE(GBA,$1D2A1C)
- The place to ascend to the sky? ...Let's<LINE> see, I've only been there once.<WAIT>
+ Fantasy? I've been<LINE>
+ there once...<WAIT>
 
- There was a pattern drawn on the ground,<LINE> and 4 holes in the shape of circles.<WAIT>
+ All I remember is<LINE>
+ a design with<WAIT>
 
- But in the end, I had no idea<LINE> how to actually use it...<WAIT>
+ 4 round holes...<LINE>
+ That's all...<WAIT>
 
- to ascend to the sky.<END>
+ I forget how to<LINE>
+ get there.<END>
 
 
 //POINTER #24 @ $1D2A20 - STRING #24 @ $1D0858
 
 #WRITE(GBA,$1D2A20)
- Due to the recent eruptions,<LINE> the place to ascend to the sky...<WAIT>
+ Recent eruptions<LINE>
+ have buried the<WAIT>
 
- has been completely buried<LINE> in volcanic ash.<END>
+ access point to<LINE>
+ Fantasy!<END>
 
 
 //POINTER #25 @ $1D2A24 - STRING #25 @ $1D088C
 
 #WRITE(GBA,$1D2A24)
- I hear the Karabon Champ often visits<LINE> the Forest of Training...<WAIT>
-
- which is just past this town.<WAIT>
-
- It's said the Champ passes down a<LINE> Legendary Karabon from generation to generation.<WAIT>
-
- I suppose it's something like a<LINE> championship belt. I'd love to see it.<END>
+<END>
 
 
 //POINTER #26 @ $1D2A28 - STRING #26 @ $1D0905
 
 #WRITE(GBA,$1D2A28)
- If you're looking for the place to<LINE> ascend to the sky, it's past the Forest of Training.<WAIT>
+ Go right through<LINE>
+ T.Forest.<WAIT>
 
- You can reach the Forest of Training<LINE> by exiting this town to the east.<END>
+ It's just East of<LINE>
+ here...<END>
 
 
 //POINTER #27 @ $1D2A2C - STRING #27 @ $1D0948
 
 #WRITE(GBA,$1D2A2C)
- I am King.<WAIT>
+ I am King!<WAIT>
 
- ...Though some also call me<LINE> the Karabon Champ.<WAIT>
+ Some people call<LINE>
+ me Karabon Champ!<WAIT>
 
- Looking closely, you have quite a<LINE> large number of Karabons with you.<WAIT>
+ You got a lot of<LINE>
+ Karabons!<WAIT>
 
- ...Hmm, perfect timing.<WAIT>
+ Perfect! ...<WAIT>
 
- Truth is, I'm currently looking<LINE> for a battle opponent...<WAIT>
+ I'm looking for an<LINE>
+ opponent.<WAIT>
 
- Would you care to spar with me?<LINE> Of course, I won't ask you to do it for free.<WAIT>
+ Wanna battle? I'll<LINE>
+ give you a prize<WAIT>
 
- If you win,<LINE> I'll give you this Legendary Karabon...<WAIT>
+ if you win...<WAIT>
 
- the Turtle King!<WAIT>
+ KameKing will be<LINE>
+ yours!<WAIT>
 
- In other words, if you win, you'll<LINE> become the new Karabon Champ.<WAIT>
+ You will be the new<LINE>
+ Karabon Champ!<WAIT>
 
- Now then, it's a best-of-three match.<LINE> The first to take 2 rounds wins.<WAIT>
+ Ok. Best 2 outta<LINE>
+ 3, then!<WAIT>
 
- However, I will count any ties<LINE> as my victory.<WAIT>
+ Oh, and if it's a<LINE>
+ tie, I win.<WAIT>
 
- You might not agree with that, but<LINE> that's just how the world works.<WAIT>
+ That's just the<LINE>
+ way it is...<WAIT>
 
- Now, let's begin!<END>
+ Let's do battle!<END>
 
 
 //POINTER #28 @ $1D2A30 - STRING #28 @ $1D0A9C
 
 #WRITE(GBA,$1D2A30)
- That was quite good training.<LINE> Thank you.<WAIT>
+ That was good<LINE>
+ training. Thanks!<WAIT>
 
- Come battle me again sometime.<END>
+ Come back again<LINE>
+ sometime!<END>
 
 
 //POINTER #29 @ $1D2A34 - STRING #29 @ $1D0AC8
 
 #WRITE(GBA,$1D2A34)
- ...I lost. From now on, you<LINE> are the new Karabon Champ.<WAIT>
+ Congrats! You are<LINE>
+ the new Champ!<WAIT>
 
- Now, take the Legendary Karabon,<LINE> the Turtle King, with you.<END>
+ Take KameKing with<LINE>
+ you, Champ!<END>
 
 
 //POINTER #30 @ $1D2A38 - STRING #30 @ $1D0B0E
 
 #WRITE(GBA,$1D2A38)
- The Ultimate Weapon is already<LINE> 99 percent complete...<WAIT>
+ They have finished<LINE>
+ 9935505755465f...<WAIT>
 
- ...Hurry! There's no time!<END>
+ The Ultimate<LINE>
+ Weapon! Hurry up!<END>
 
 
 //POINTER #31 @ $1D2A3C - STRING #31 @ $1D0B45
 
 #WRITE(GBA,$1D2A3C)
- Max, what are you dawdling for!<WAIT>
+ What are you<LINE>
+ waiting for, Max?<WAIT>
 
- Complete the Ultimate Weapon<LINE> immediately!<END>
+ Complete the<LINE>
+ weapon NOW!<END>
 
 
 //POINTER #32 @ $1D2A40 - STRING #32 @ $1D0B79
 
 #WRITE(GBA,$1D2A40)
- ....................................<END>
+ ....................<END>
 
 
 //POINTER #33 @ $1D2A44 - STRING #33 @ $1D0B8D
 
 #WRITE(GBA,$1D2A44)
- ...! You're Bomberman!?<LINE> Ugh... we were so close...<WAIT>
+ Bomberman? HA!<LINE>
+ We're almost done!<WAIT>
 
- Max! Take on Bomberman<LINE> and buy us some time!<END>
+ Max, keep him<LINE>
+ busy!<END>
 
 
 //POINTER #34 @ $1D2A48 - STRING #34 @ $1D0BDA
 
 #WRITE(GBA,$1D2A48)
- .......................Roger...<END>
+ ...Understood...<END>
 
 
 //POINTER #35 @ $1D2A4C - STRING #35 @ $1D0BEE
 
 #WRITE(GBA,$1D2A4C)
- ...Ugh... Where am I...<LINE> Who... am I...<END>
+ ...huh? Where<LINE>
+ am I?...<END>
 
 
 //POINTER #36 @ $1D2A50 - STRING #36 @ $1D0C0C
 
 #WRITE(GBA,$1D2A50)
- ...Tch... Even though the<LINE> Ultimate Weapon was...<WAIT>
+ The Ultimate<LINE>
+ Weapon was...<WAIT>
 
- so close to completion...<WAIT>
+ almost completed!<WAIT>
 
- Max, as I thought, you<LINE> are a failure.<WAIT>
+ Max! You are a<LINE>
+ failure!<WAIT>
 
- I no longer have any use for<LINE> a failure like you.<END>
+ I have no use for<LINE>
+ failures!<END>
 
 
 //POINTER #37 @ $1D2A54 - STRING #37 @ $1D0C6B
 
 #WRITE(GBA,$1D2A54)
- You... Phantom Bomber... I see.<LINE> ...So you were the one who... I won't forgive you!!<WAIT>
+ BrainBomber! I'll<LINE>
+ get you for this!<WAIT>
 
- Bomberman! Let's crush him!<LINE> Lend me your power!<END>
+ Bomberman! Let's<LINE>
+ take this guy out!<END>
 
 
 //POINTER #38 @ $1D2A58 - STRING #38 @ $1D0CB3
 
 #WRITE(GBA,$1D2A58)
- Insolent fools! I'll send you<LINE> both to hell together!<END>
+ If we both fight<LINE>
+ him, we can win!<END>
 
 
 //POINTER #39 @ $1D2A5C - STRING #39 @ $1D0CD4
 
 #WRITE(GBA,$1D2A5C)
- ...Looks like we somehow<LINE> managed to sort that out...<WAIT>
+ Looks like we<LINE>
+ wiped him out!<WAIT>
 
- I'm sorry for causing you<LINE> so much trouble this time.<WAIT>
+ Thanks for finding<LINE>
+ me.<WAIT>
 
- ...Anyway, I guess it's time<LINE> to return to the surface.<END>
+ Let's go back to<LINE>
+ the surface!<END>
 
 
 //POINTER #40 @ $1D2A60 - STRING #40 @ $1D0D1F
@@ -567,7 +728,8 @@
 //POINTER #42 @ $1D2A68 - STRING #42 @ $1D0D23
 
 #WRITE(GBA,$1D2A68)
- I can't advance because<LINE> of the sandstorm!!<END>
+ We can't continue<LINE>
+ in this sandstorm.<END>
 
 
 //POINTER #43 @ $1D2A6C - STRING #43 @ $1D0D33
@@ -597,32 +759,46 @@
 //POINTER #47 @ $1D2A7C - STRING #47 @ $1D0D3B
 
 #WRITE(GBA,$1D2A7C)
- ...Are you traveling<LINE> with Unikornos?<WAIT>
+ ...did you bring<LINE>
+ Youno?<WAIT>
 
- ...I see. So you have met<LINE> with the Queen.<WAIT>
+ ...Really? You<LINE>
+ met the Queen?<WAIT>
 
- I am relieved to hear that the<LINE> Queen is safe.<WAIT>
+ I'm glad she's<LINE>
+ safe!<WAIT>
 
- Nice to meet you, I am Unikornes.<WAIT>
+ Hi! I'm Youni!<LINE>
+ Nice to meet you.<WAIT>
 
- I originally lived in the Sky Castle<LINE> alongside Unikornos, but...<WAIT>
+ I lived with Youno<LINE>
+ in Fantasy, but<WAIT>
 
- I was abducted by the enemy, and then<LINE> rescued by this elderly gentleman.<WAIT>
+ I was kidnapped by<LINE>
+ bad guys.<WAIT>
 
- Well then, let us go.<LINE> For the future of this planet.<WAIT>
+ Well, we gotta get<LINE>
+ going, and fast!<WAIT>
 
- Karabon Unikornes<LINE> joined your team!<SFX><$0C><WAIT>
+ Karabon Youni has<LINE>
+ joined forces.<SFX><$0C><WAIT>
 
- My ability is<LINE> Digging.<WAIT>
+ Set me and you can<LINE>
+ use me to reveal<WAIT>
 
- While I am equipped, you can press<LINE> the B Button to dig holes.<WAIT>
+ access points to<LINE>
+ Fantasy.<WAIT>
 
- I hear the place to ascend to the sky<LINE> was buried by the eruption.<WAIT>
+ I heard Fantasy<LINE>
+ was buried...<WAIT>
 
- When the time comes to dig it out, my<LINE> ability will surely be of use to you.<WAIT>
+ I can help dig it<LINE>
+ out!<WAIT>
 
- Do you want to set me to the B Button?<LINE>
-  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$0A><$2D><$0A><$2E><EQUIP_KARABON><$17><CLOSE>
+ Do you want to set<WAIT>
+
+ me now?<LINE>
+  yes  no<PROMPT_SWAP_NO><$01><$02><$06><$02><$0A><$2D><$0A><$2E><EQUIP_KARABON><$17><CLOSE>
 
 
 //POINTER #48 @ $1D2A80 - STRING #48 @ $1D0EC8
@@ -640,469 +816,620 @@
 //POINTER #50 @ $1D2A88 - STRING #50 @ $1D0ECC
 
 #WRITE(GBA,$1D2A88)
- You take the first win...<LINE> Alright! On to the next match!<END>
+ You won the 1st<LINE>
+ round! Next Round!<END>
 
 
 //POINTER #51 @ $1D2A8C - STRING #51 @ $1D0EEA
 
 #WRITE(GBA,$1D2A8C)
- That makes 1 win and 1 loss...<LINE> Now, for the final match!<END>
+ One win, one loss.<LINE>
+ Last Round!<END>
 
 
 //POINTER #52 @ $1D2A90 - STRING #52 @ $1D0F0B
 
 #WRITE(GBA,$1D2A90)
- I take the first win...<LINE> Now, on to the next match!<END>
+ I won the 1st<LINE>
+ round! Next Round!<END>
 
 
 //POINTER #53 @ $1D2A94 - STRING #53 @ $1D0F29
 
 #WRITE(GBA,$1D2A94)
- That makes 1 win and 1 loss...<LINE> Now, for the final match!<END>
+ One win, one loss.<LINE>
+ Last Round!<END>
 
 
 //POINTER #54 @ $1D2A98 - STRING #54 @ $1D0F4A
 
 #WRITE(GBA,$1D2A98)
- Nice to meet you. You<LINE> must be Bomberman.<WAIT>
+ You're Bomberman,<LINE>
+ aren't you?<WAIT>
 
- I am the Turtle King,<LINE> gatekeeper of the Sky Castle.<WAIT>
+ I'm KameKing,<LINE>
+ gatekeeper to<WAIT>
 
- ...Though there was hardly any need<LINE> for a gatekeeper at a peaceful castle...<WAIT>
+ Fantasy! I didn't<LINE>
+ do much in peace.<WAIT>
 
- so I was spending my days<LINE> leisurely on the surface...<WAIT>
+ just walked around<LINE>
+ all day. Now I<WAIT>
 
- But the Sky Castle was<LINE> conquered by the enemy...<WAIT>
+ must go, since the<LINE>
+ enemies have <WAIT>
 
- and now that it's been locked from the<LINE> inside, I must go.<WAIT>
+ locked Fantasy<LINE>
+ up tight!<WAIT>
 
- Let's hurry! Before the<LINE> Ultimate Weapon is completed!<WAIT>
+ Hurry! Before the<LINE>
+ weapon's complete!<WAIT>
 
- Karabon Turtle King<LINE> joined your team!<SFX><$0C><WAIT>
+ Karabon KameKing<LINE>
+ joined forces!<SFX><$0C><WAIT>
 
- My ability is the<LINE> Key to the Sky.<WAIT>
+ I am the key to<LINE>
+ Fantasy!<WAIT>
 
- If you equip me, you can<LINE> unlock the Sky Castle.<WAIT>
+ If I am set, I can<LINE>
+ open Fantasy!<WAIT>
 
- Do you want to set me to the B Button?<LINE>
-  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$0A><$30><$0A><$31> Bomberman set the<LINE> Medallion of Courage!!<END>
+ Do you want to set<WAIT>
+
+ me now?<LINE>
+  yes  no<PROMPT_SWAP_NO><$01><$02><$06><$02><$0A><$30><$0A><$31> Bomberman set the<LINE>
+ Medal of Bravery!<END>
 
 
 //POINTER #55 @ $1D2A9C - STRING #55 @ $1D1094
 
 #WRITE(GBA,$1D2A9C)
- Bomberman set the<LINE> Medallion of Courage!!<END>
+ Bomberman set the<LINE>
+ Medal of Bravery!<END>
 
 
 //POINTER #56 @ $1D2AA0 - STRING #56 @ $1D10AF
 
 #WRITE(GBA,$1D2AA0)
- Bomberman set the<LINE> Medallion of Justice!!<END>
+ Bomberman set the<LINE>
+ Medal of Justice!<END>
 
 
 //POINTER #57 @ $1D2AA4 - STRING #57 @ $1D10CA
 
 #WRITE(GBA,$1D2AA4)
- Bomberman set the<LINE> Medallion of Love!!<END>
+ Bomberman set the<LINE>
+ Medal of Love!<END>
 
 
 //POINTER #58 @ $1D2AA8 - STRING #58 @ $1D10E4
 
 #WRITE(GBA,$1D2AA8)
- Bomberman set the<LINE> Medallion of Friendship!!<END>
+ Bomberman set the<LINE>
+ Friendship Medal!<END>
 
 
 //POINTER #59 @ $1D2AAC - STRING #59 @ $1D1101
 
 #WRITE(GBA,$1D2AAC)
- Oh? I don't hear the sound<LINE> of the sandstorm anymore...<WAIT>
+ Oh! The sandstorm<LINE>
+ died down!<WAIT>
 
- Thank goodness! Now I can finally go<LINE> to Eta Town to buy Teriyaki Beef.<END>
+ Now I can get some<LINE>
+ Teriyaki Beef!<END>
 
 
 //POINTER #60 @ $1D2AB0 - STRING #60 @ $1D1142
 
 #WRITE(GBA,$1D2AB0)
- Hint 2<END>
+<END>
 
 
 //POINTER #61 @ $1D2AB4 - STRING #61 @ $1D1148
 
 #WRITE(GBA,$1D2AB4)
-<JUMP_FLAG_SET><$01><$67><$0A><$73> Have you met Mr. Tekuji, who<LINE> lives next door yet?<WAIT>
+<JUMP_FLAG_SET><$01><$67><$0A><$73> Have you met Mr.<LINE>
+ Tekuji, next-door?<WAIT>
 
- He has a rare Karabon named<LINE> Sea Balloon at his house.<WAIT>
+ He has a Karabon<LINE>
+ named Sibaloon.<WAIT>
 
- According to what Mr. Tekuji told me...<WAIT>
+ According to<LINE>
+ Tekuji...<WAIT>
 
- If you have Sea Balloon, you can create<LINE> a beautiful Rainbow Bridge...<WAIT>
+ Sibaloon can build<LINE>
+ a beautiful <WAIT>
 
- to help you cross a gap that's<LINE> blocking your path.<END>
+ Rainbow Bridge to<LINE>
+ cross gaps.<END>
 
 
 //POINTER #62 @ $1D2AB8 - STRING #62 @ $1D11F6
 
 #WRITE(GBA,$1D2AB8)
- There's a cave in this desert<LINE> that leads to Cosmos.<WAIT>
+ The cave to Omega<LINE>
+ is in the desert!<WAIT>
 
- But the entrance is surrounded<LINE> by quicksand...<WAIT>
+ Quicksand is<LINE>
+ everywhere!<WAIT>
 
- so they say you can't approach it easily.<END>
+ It's really hard<LINE>
+ to avoid.<END>
 
 
 //POINTER #63 @ $1D2ABC - STRING #63 @ $1D1245
 
 #WRITE(GBA,$1D2ABC)
- It was completely buried by the<LINE> earthquake caused by the eruption, but...<WAIT>
+ It was buried cuz<LINE>
+ of the volcano.<WAIT>
 
- there used to be a path in the desert<LINE> leading far to the south...<WAIT>
+ There used to be<LINE>
+ a road from the<WAIT>
 
- towards a forest called the<LINE> Forest of Training.<WAIT>
+ desert to T.Forest<LINE>
+ and farther South.<WAIT>
 
- As for the exact location... well...<WAIT>
+ I can't find it<LINE>
+ now...<WAIT>
 
- ...I'm sorry.<LINE> I've completely forgotten.<END>
+ Sorry, I forgot<LINE>
+ where it was...<END>
 
 
 //POINTER #64 @ $1D2AC0 - STRING #64 @ $1D12D1
 
 #WRITE(GBA,$1D2AC0)
- I'm in trouble. I'm completely<LINE> trapped by the lava flows.<WAIT>
+ It was trapped by<LINE>
+ the lava flow!<WAIT>
 
- You must be pretty brave to have slipped<LINE> through the gaps in the lava...<WAIT>
+ You're brave to<LINE>
+ have come through!<WAIT>
 
- Speaking of brave, I haven't seen anyone<LINE> from the shop at the top of the mountain...<WAIT>
+ Speaking of brave,<LINE>
+ anyone come down<WAIT>
 
- come down yet. I wonder if they're still<LINE> open for business in the middle of all this.<WAIT>
+ from the shop on<LINE>
+ the mt. top on<WAIT>
 
- The location? It's on the far west<LINE> side of the peak.<END>
+ the West side of<LINE>
+ the summit?<END>
 
 
 //POINTER #65 @ $1D2AC4 - STRING #65 @ $1D1378
 
 #WRITE(GBA,$1D2AC4)
-<JUMP_FLAG_SET><$01><$64><$0A><$63> Hey there. I have a<LINE> little favor to ask you.<WAIT>
+<JUMP_FLAG_SET><$01><$64><$0A><$63> Could I ask a<LINE>
+ favor?<WAIT>
 
- I absolutely love the Teriyaki Beef<LINE> from the shop in Eta Town.<WAIT>
+ I really love<LINE>
+ Teriyaki Beef, but<WAIT>
 
- But the base of the mountain is covered<LINE> in lava, so I can't go buy any.<WAIT>
+ I can't go cuz of<LINE>
+ the eruptions!<WAIT>
 
- If you happen to have some<LINE> Teriyaki Beef from Eta Town...<WAIT>
+ If you have any<LINE>
+ Teriyaki Beef,<WAIT>
 
- could I trade this Heart Container<LINE> for it?<WAIT>
+ would you trade<LINE>
+ for this heart?<WAIT>
 
- Will you trade with her?<LINE>
-  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$0A><$61><$0A><$62> You know there's a guy around here<LINE> that breathes long streams of fire, right?<WAIT>
+ Do you want to swap?<LINE>
+  yes  no<PROMPT_SWAP_NO><$01><$02><$06><$02><$0A><$61><$0A><$62> Seen anything that<LINE>
+ spits fire?<WAIT>
 
- I realized it by accident, but...<WAIT>
+ I saw it, by<LINE>
+ chance, actually.<WAIT>
 
- It seems that fire only hits you if<LINE> you stand vertically or horizontally from him.<WAIT>
+ The flames only go<LINE>
+ horizontally<WAIT>
 
- In other words, if you stand diagonally<LINE> from him instead of...<WAIT>
+ and vertically,<LINE>
+ so if you stay<WAIT>
 
- directly above, below, or to his side,<LINE> the flames won't hit you.<END>
+ diagonal to it,<LINE>
+ you won't get hit!<END>
 
 
 //POINTER #66 @ $1D2AC8 - STRING #66 @ $1D1440
 
 #WRITE(GBA,$1D2AC8)
- You know there's a guy around here<LINE> that breathes long streams of fire, right?<WAIT>
+ Seen anything that<LINE>
+ spits fire?<WAIT>
 
- I realized it by accident, but...<WAIT>
+ I saw it, by<LINE>
+ chance, actually.<WAIT>
 
- It seems that fire only hits you if<LINE> you stand vertically or horizontally from him.<WAIT>
+ The flames only go<LINE>
+ horizontally<WAIT>
 
- In other words, if you stand diagonally<LINE> from him instead of...<WAIT>
+ and vertically,<LINE>
+ so if you stay<WAIT>
 
- directly above, below, or to his side,<LINE> the flames won't hit you.<END>
+ diagonal to it,<LINE>
+ you won't get hit!<END>
 
 
 //POINTER #67 @ $1D2ACC - STRING #67 @ $1D14D8
 
 #WRITE(GBA,$1D2ACC)
- I think you can see it from here, but<LINE> be careful of the flowing lava.<WAIT>
+ See it from here?<LINE>
+ Mind the lava!<WAIT>
 
- Not only will you take damage if<LINE> you touch it...<WAIT>
+ If you touch it,<LINE>
+ you'll get hurt<WAIT>
 
- but if a bomb touches the lava,<LINE> it will explode instantly.<END>
+ and bombs you<LINE>
+ touch explode!<END>
 
 
 //POINTER #68 @ $1D2AD0 - STRING #68 @ $1D1534
 
 #WRITE(GBA,$1D2AD0)
- Right after the meteorite fell,<LINE> a soldier from Fantasy came by.<WAIT>
+ Warriors came<LINE>
+ after the meteors<WAIT>
 
- He asked me about the color of the<LINE> meteorite, and when I told him it was red...<WAIT>
+ fell. We told them<LINE>
+ the meteors were<WAIT>
 
- He just said, "I see, understood,"<LINE> and rushed back in a hurry.<WAIT>
+ red and they ran<LINE>
+ off to do battle.<WAIT>
 
- At the time, he mumbled something about<LINE> the Dastardly Bombers...<WAIT>
+ I think they said<LINE>
+ something about<WAIT>
 
- and how a red meteorite meant it<LINE> was Golem Bomber... or something like that?<WAIT>
+ GolemBomber being<LINE>
+ red or something...<WAIT>
 
- ...I haven't been on this planet very long,<LINE> so I don't really get it, but...<WAIT>
+ I'm new here, so I<LINE>
+ don't know much...<WAIT>
 
- Did something like this happen<LINE> here before?<END>
+ Has this happened<LINE>
+ before?<END>
 
 
 //POINTER #69 @ $1D2AD4 - STRING #69 @ $1D161D
 
 #WRITE(GBA,$1D2AD4)
- Oh, I haven't seen your face before.<LINE> Did you come from the Fairy Palace?<WAIT>
+ Where did you come<LINE>
+ from, the Palace?<WAIT>
 
- Zeta Town, which lies ahead, is<LINE> currently covered in a sandstorm...<WAIT>
+ A sandstorm hit<LINE>
+ Zeta!<WAIT>
 
- so you won't be able to enter unless<LINE> you have the Karabon Unikornos with you.<WAIT>
+ You'll need<LINE>
+ Karabon Youno!<WAIT>
 
- ...Oh, you do have him with you.<LINE> Then don't forget to equip him as you go.<END>
+ Have him? Be sure<LINE>
+ to set him!<END>
 
 
 //POINTER #70 @ $1D2AD8 - STRING #70 @ $1D16AE
 
 #WRITE(GBA,$1D2AD8)
- It's nice that the shop in this<LINE> town sells Teriyaki Beef, but...<WAIT>
+ The shop has<LINE>
+ Teriyaki Beef,<WAIT>
 
- they don't sell CoroCoro Comics.<WAIT>
+ but no comics!<LINE>
+ You gotta go<WAIT>
 
- I hear they sell them near the volcano,<LINE> but it's just so far away.<END>
+ near the volcano<LINE>
+ to buy a comic.<END>
 
 
 //POINTER #71 @ $1D2ADC - STRING #71 @ $1D1701
 
 #WRITE(GBA,$1D2ADC)
-<JUMP_FLAG_SET><$01><$56><$0A><$74> You want to go to the place to<LINE> ascend to the sky?<WAIT>
+<JUMP_FLAG_SET><$01><$56><$0A><$74> Wanna get to the<LINE>
+ access point?<WAIT>
 
- To get there, you must head south<LINE> and pass through Theta Town.<WAIT>
+ Go South through<LINE>
+ Theta.<WAIT>
 
- However, that path was buried by the<LINE> earthquake when the volcano erupted.<END>
+ The road has since<LINE>
+ been buried.<END>
 
 
 //POINTER #72 @ $1D2AE0 - STRING #72 @ $1D176C
 
 #WRITE(GBA,$1D2AE0)
-<JUMP_FLAG_SET><$01><$1B><$0A><$75> Have you gotten used to<LINE> using the Rainbow Bridge?<WAIT>
+<JUMP_FLAG_SET><$01><$1B><$0A><$75> Can you use the<LINE>
+ Rainbow Bridge?<WAIT>
 
- Come to think of it, right in the middle<LINE> of Zabuzabu Lake west of Alpha Town...<WAIT>
+ Oh! In the middle<LINE>
+ of the ColdSea <WAIT>
 
- there seems to be a place you can only<LINE> reach by using the Rainbow Bridge.<WAIT>
+ there's a place to<LINE>
+ build a bridge.<WAIT>
 
- If you're interested, why don't<LINE> you go back and check it out sometime?<END>
+ Why don't you go<LINE>
+ back and see?<END>
 
 
 //POINTER #73 @ $1D2AE4 - STRING #73 @ $1D17F2
 
 #WRITE(GBA,$1D2AE4)
-<JUMP_FLAG_SET><$01><$65><$0A><$66> Wow, it's impressive you managed to<LINE> find your way into my secret base.<WAIT>
+<JUMP_FLAG_SET><$01><$65><$0A><$66> How did you find<LINE>
+ my secret base?<WAIT>
 
- Alright! From now on, you're<LINE> one of my friends!<WAIT>
+ Ok, we can be<LINE>
+ friends, then.<WAIT>
 
- To commemorate our new friendship,<LINE> I'll give you this!<WAIT>
+ Hey friend!<LINE>
+ Have this!<WAIT>
 
-<SET_FLAG><$01><$65> Bomberman got the<LINE> Large Medicine!<JUMP_FLAG_SET><$00><$3C><$0A><$65><SFX><$0C><WAIT>
+<SET_FLAG><$01><$65> Bomberman gets<LINE>
+ Large Medicine!<JUMP_FLAG_SET><$00><$3C><$0A><$65><SFX><$0C><WAIT>
 
-<SET_FLAG><$00><$3C><JUMP><$0A><$66> There are 25 different kinds of<LINE> Karabons on this planet.<WAIT>
+<SET_FLAG><$00><$3C><JUMP><$0A><$66> There are 25<LINE>
+ Karabons...<WAIT>
 
- I wonder how many kinds you've<LINE> managed to recruit?<END>
+ How many are your<LINE>
+ friends?<END>
 
 
 //POINTER #74 @ $1D2AE8 - STRING #74 @ $1D1877
 
 #WRITE(GBA,$1D2AE8)
- There are 25 different kinds of<LINE> Karabons on this planet.<WAIT>
+ There are 25<LINE>
+ Karabons...<WAIT>
 
- I wonder how many kinds you've<LINE> managed to recruit?<END>
+ How many are your<LINE>
+ friends?<END>
 
 
 //POINTER #75 @ $1D2AEC - STRING #75 @ $1D18AD
 
 #WRITE(GBA,$1D2AEC)
- Oh, a guest.<LINE> Welcome to the water capital, Cosmos.<END>
+ Welcome to Omega!<END>
 
 
 //POINTER #76 @ $1D2AF0 - STRING #76 @ $1D18CB
 
 #WRITE(GBA,$1D2AF0)
-<JUMP_FLAG_SET><$01><$54><$0A><$76> Have you seen the giant sleeping<LINE> right next to this house?<WAIT>
+<JUMP_FLAG_SET><$01><$54><$0A><$76> Seen the sleeping<LINE>
+ giant?<WAIT>
 
- A little while ago, he came over there<LINE> and just collapsed...<WAIT>
+ He came here and<LINE>
+ just fell asleep!<WAIT>
 
- He seems to be mumbling about<LINE> being hungry in his sleep, but...<WAIT>
+ He talks in his<LINE>
+ sleep, saying he's<WAIT>
 
- he won't eat anything. Maybe the food in<LINE> this town isn't to his liking.<WAIT>
+ hungry, but won't<LINE>
+ eat anything we<WAIT>
 
- I wonder what I should bring him<LINE> so he'll eat...<END>
+ bring to him...<END>
 
 
 //POINTER #77 @ $1D2AF4 - STRING #77 @ $1D196F
 
 #WRITE(GBA,$1D2AF4)
-<JUMP_FLAG_SET><$01><$55><$0A><$77> This Cosmos is a water capital<LINE> protected by Master Marine Eel.<WAIT>
+<JUMP_FLAG_SET><$01><$55><$0A><$77> Omega is guarded<LINE>
+ by Unagi.<WAIT>
 
- No matter what happens in other lands,<LINE> this place alone remains perfectly peaceful.<WAIT>
+ It's always very<LINE>
+ peaceful here.<WAIT>
 
- Master Marine Eel has lived here<LINE> for a very, very long time...<WAIT>
+ Unagi has lived<LINE>
+ here for ages!<WAIT>
 
- He's a very long-lived Karabon, you see.<WAIT>
+ He's an extremely<LINE>
+ old Karabon.<WAIT>
 
- He can use a mysterious power to make<LINE> it rain.<WAIT>
+ His power is to<LINE>
+ make it rain...<WAIT>
 
- Come to think of it, I haven't seen<LINE> him around recently.<WAIT>
+ I haven't seen<LINE>
+ him lately...<WAIT>
 
- I wonder if he's doing well?<END>
+ I guess he's OK.<END>
 
 
 //POINTER #78 @ $1D2AF8 - STRING #78 @ $1D1A48
 
 #WRITE(GBA,$1D2AF8)
-<JUMP_FLAG_SET><$01><$54><$0A><$78> Hoho, did you come to see<LINE> Master Marine Eel?<WAIT>
+<JUMP_FLAG_SET><$01><$54><$0A><$78> Come to see<LINE>
+ Unagi, huh?<WAIT>
 
- Hmmm... you won't be able to unless you<LINE> get Mr. Moog to move out of the way first...<WAIT>
+ You gotta move<LINE>
+ Morg first!<WAIT>
 
- Eh? Who's Mr. Moog? That's the name<LINE> of the giant sleeping over there.<END>
+ Morg? He's the<LINE>
+ giant over there.<END>
 
 
 //POINTER #79 @ $1D2AFC - STRING #79 @ $1D1AB4
 
 #WRITE(GBA,$1D2AFC)
- Max? ...By Max, do you mean<LINE> the blue-eyed Max?<WAIT>
+ Max? Blue-eyed<LINE>
+ Max?<WAIT>
 
- Ah, yes, I know him, of course I do.<LINE> Oh, how nostalgic...<WAIT>
+ I know him!<LINE>
+ Ah, the memories!<WAIT>
 
- Have you seen the cave connecting<LINE> this place to the desert?<WAIT>
+ You been to the<LINE>
+ connecting cave?<WAIT>
 
- Max was the one who suggested<LINE> digging that.<WAIT>
+ Max thought that up<LINE>
+ and dug it out<WAIT>
 
- He dug it to transport water from here<LINE> when the water shortage in the desert...<WAIT>
+ so that water<LINE>
+ could be carried<WAIT>
 
- was particularly severe...<LINE> He was a hero on this planet.<WAIT>
+ to the desert in<LINE>
+ time of drought.<WAIT>
 
- To think something like that would<LINE> happen to him... Fate is cruel...<WAIT>
+ He's a hero!<LINE>
+ ...or was...<WAIT>
 
- By the way, you're an outsider, yet<LINE> you know a lot about Max?<WAIT>
+ How do you know<LINE>
+ Max?<WAIT>
 
- Eh? A different Max?<LINE> ...Is that so... I'm sorry about that.<END>
+ Oh? Different Max.<LINE>
+ Sorry...<END>
 
 
 //POINTER #80 @ $1D2B00 - STRING #80 @ $1D1BDD
 
 #WRITE(GBA,$1D2B00)
- For now, it seems Cosmos is the only<LINE> place on this planet that's still safe, but...<WAIT>
+ Omega is the only<LINE>
+ undamaged place!<WAIT>
 
- it's only a matter of time before<LINE> this place is attacked by the enemy, too...<WAIT>
+ Only for now,<LINE>
+ though...<WAIT>
 
- The Sky Castle is the key.<WAIT>
+ If we got<LINE>
+ Fantasy back,<WAIT>
 
- If we could just take it back,<LINE> the situation would change...<WAIT>
+ we'd know what was<LINE>
+ happening, but<WAIT>
 
- ...But the one occupying<LINE> that place is...<WAIT>
+ they say the one<LINE>
+ holding it is...<WAIT>
 
- rumored to be that Phantom Bomber...<WAIT>
+ BrainBomber!<WAIT>
 
- Phantom Bomber acts as the leader of the<LINE> 5 Dastardly Bombers...<WAIT>
+ He attacked here<LINE>
+ before...<WAIT>
 
- who have attacked this planet in the past.<WAIT>
+ Leader of the 5<LINE>
+ Dastardly Bombers!<WAIT>
 
- He is cold-blooded, calculating, and doesn't<LINE> even consider his allies to be comrades...<WAIT>
+ Coldhearted, he<LINE>
+ uses terror to<WAIT>
 
- He rules both friend and foe through fear...<LINE> That's the kind of guy he is.<WAIT>
+ control both <LINE>
+ friend and foe!<WAIT>
 
- I heard Max took him down with him<LINE> in their previous battle, but...<WAIT>
+ He and Max stabbed<LINE>
+ each other before,<WAIT>
 
- he truly is a guy with devil's luck...<END>
+ but the forces<LINE>
+ of evil won!<END>
 
 
 //POINTER #81 @ $1D2B04 - STRING #81 @ $1D1D53
 
 #WRITE(GBA,$1D2B04)
- Master Marine Eel's shrine<LINE> is just ahead.<END>
+ Unagi's Shrine<LINE>
+ is over there.<END>
 
 
 //POINTER #82 @ $1D2B08 - STRING #82 @ $1D1D6C
 
 #WRITE(GBA,$1D2B08)
- The place to ascend to the sky? ...Let's<LINE> see, I've only been there once.<WAIT>
+ Road to Fantasy?<LINE>
+ I went once...<WAIT>
 
- There was a pattern drawn on the ground,<LINE> and 4 holes in the shape of circles.<WAIT>
+ There was a mark<LINE>
+ on the ground with<WAIT>
 
- I thought maybe you were supposed to<LINE> put something into those holes...<WAIT>
+ 4 holes. I put <LINE>
+ rocks in to see <WAIT>
 
- But even when I put some random rocks<LINE> in them, nothing happened.<WAIT>
+ what would happen.<WAIT>
 
- It was boring, so I just came back.<END>
+ Nothing happened,<LINE>
+ so I went home.<END>
 
 
 //POINTER #83 @ $1D2B0C - STRING #83 @ $1D1E0B
 
 #WRITE(GBA,$1D2B0C)
- Due to the recent eruption, volcanic ash<LINE> flew all the way over here.<WAIT>
+ I hate all this<LINE>
+ volcanic ash!<WAIT>
 
- I'll have to redo the laundry...<WAIT>
+ I'll have to do<LINE>
+ laundry again!<WAIT>
 
- Speaking of which, I heard the place to<LINE> ascend to the sky deep in the forest...<WAIT>
+ They say the<LINE>
+ access point in<WAIT>
 
- was completely buried in volcanic ash.<WAIT>
+ the forest was<LINE>
+ completely buried!<WAIT>
 
- I guess we're still better off here.<END>
+ Not that bad here,<LINE>
+ yet...<END>
 
 
 //POINTER #84 @ $1D2B10 - STRING #84 @ $1D1E8D
 
 #WRITE(GBA,$1D2B10)
- Have you ever seen the castle<LINE> floating in the sky?<WAIT>
+ Seen the floating<LINE>
+ castle?<WAIT>
 
- It was called Fantasy, and it used<LINE> to be such a beautiful castle...<WAIT>
+ Used to be called<LINE>
+ Fantasy, but<WAIT>
 
- but now it's taken on a<LINE> creepy shape...<WAIT>
+ now it's just a<LINE>
+ creepy place...<WAIT>
 
- I wonder if it will ever return to its<LINE> original shape. I liked it better that way.<END>
+ Pity. I liked it<LINE>
+ before...<END>
 
 
 //POINTER #85 @ $1D2B14 - STRING #85 @ $1D1F09
 
 #WRITE(GBA,$1D2B14)
- I hear the Karabon Champ often visits<LINE> the Forest of Training...<WAIT>
+ The Karabon Champ<LINE>
+ often goes to<WAIT>
 
- which is just past this town.<WAIT>
+ T.Forest,<LINE>
+ past this town.<WAIT>
 
- It's said the Champ passes down a<LINE> Legendary Karabon from generation to generation.<WAIT>
+ The Champ passes<LINE>
+ down Karabons<WAIT>
 
- I suppose it's something like a<LINE> championship belt? I'd love to see it.<END>
+ to the new Champ,<LINE>
+ like a Title Belt!<END>
 
 
 //POINTER #86 @ $1D2B18 - STRING #86 @ $1D1F7F
 
 #WRITE(GBA,$1D2B18)
- If you're looking for the place to<LINE> ascend to the sky, take the path in front of this house...<WAIT>
+ From this house is<LINE>
+ a road that will<WAIT>
 
- enter the Forest of Training, and<LINE> go straight through the forest.<END>
+ take you to the<LINE>
+ access point!<END>
 
 
 //POINTER #87 @ $1D2B1C - STRING #87 @ $1D1FC1
 
 #WRITE(GBA,$1D2B1C)
- Hm? A guest in this Phantom Oasis?<LINE> That's rare.<WAIT>
+ Not many people<LINE>
+ come here...<WAIT>
 
- I'm Elekong.<LINE> As you can see, I'm a Karabon.<WAIT>
+ I'm EleKong, a<LINE>
+ Karabon.<WAIT>
 
- This Phantom Oasis is comfortable,<LINE> but it lacks excitement.<WAIT>
+ It's nice here,<LINE>
+ but boring.<WAIT>
 
- If you don't mind, could you tell me<LINE> some stories about the outside world?<WAIT>
+ Tell me news about<LINE>
+ the outside!<WAIT>
 
- ....................................<LINE>
- ....................................<WAIT>
+ ....................<LINE>
+ ....................<WAIT>
 
- What did you say!? Is that what's<LINE> happening on the outside right now?<WAIT>
+ What? No way!<WAIT>
 
- ...Alright! If that's the case, I'll<LINE> lend you my power too!<WAIT>
+ In that case, I'm<LINE>
+ gonna help, too!<WAIT>
 
- Karabon Elekong<LINE> joined your team!<SFX><$0C><WAIT>
+ Karabon Elekong<LINE>
+ joined forces.<SFX><$0C><WAIT>
 
- My ability is<LINE> Block Pass-Through.<WAIT>
+ I can pass through<LINE>
+ blocks.<WAIT>
 
- While I am equipped, you can pass<LINE> right through destructible blocks.<WAIT>
+ Set me and use my<LINE>
+ ability, now!<WAIT>
 
- Do you want to set me to the B Button?<LINE>
-  Yes   No<PROMPT_SWAP_NO><$01><$02><$05><$02><$0A><$58><$0A><$59>  Yes<EQUIP_KARABON><$14><CLOSE>
+ Do you want to set<WAIT>
+
+ me now?<LINE>
+  yes  no<PROMPT_SWAP_NO><$01><$02><$06><$02><$0A><$58><$0A><$59><EQUIP_KARABON><$14><CLOSE>
 
 
 //POINTER #88 @ $1D2B20 - STRING #88 @ $1D2125
@@ -1120,73 +1447,82 @@
 //POINTER #90 @ $1D2B28 - STRING #90 @ $1D2129
 
 #WRITE(GBA,$1D2B28)
- Welcome to Zeta Town!<END>
+ Welcome to Zeta!<END>
 
 
 //POINTER #91 @ $1D2B2C - STRING #91 @ $1D2138
 
 #WRITE(GBA,$1D2B2C)
- Welcome to Eta Town!<END>
+ Welcome to Ita!<END>
 
 
 //POINTER #92 @ $1D2B30 - STRING #92 @ $1D2147
 
 #WRITE(GBA,$1D2B30)
- Dokkan Volcano lies ahead,<LINE> past the Dodeka Desert.<END>
+ Through the Desert<LINE>
+ to the Volcano.<END>
 
 
 //POINTER #93 @ $1D2B34 - STRING #93 @ $1D2163
 
 #WRITE(GBA,$1D2B34)
- Welcome to Theta Town!<END>
+ Welcome to Theta!<END>
 
 
 //POINTER #94 @ $1D2B38 - STRING #94 @ $1D2172
 
 #WRITE(GBA,$1D2B38)
- Forest of Training ahead.<END>
+ T.Forest ahead!<END>
 
 
 //POINTER #95 @ $1D2B3C - STRING #95 @ $1D2181
 
 #WRITE(GBA,$1D2B3C)
- Eta Town lies ahead, past<LINE> the Sarara Mountains.<END>
+ Through SararMts.<LINE>
+ To Ita Town<END>
 
 
 //POINTER #96 @ $1D2B40 - STRING #96 @ $1D219E
 
 #WRITE(GBA,$1D2B40)
- Welcome to the water<LINE> capital, Cosmos!<END>
+ Welcome to Omega.<END>
 
 
 //POINTER #97 @ $1D2B44 - STRING #97 @ $1D21B3
 
 #WRITE(GBA,$1D2B44)
-<JUMP_FLAG_CLEAR><$00><$36><$0A><$64> Thank you! I'm so happy.<LINE> Let's trade right away, then.<WAIT>
+<JUMP_FLAG_CLEAR><$00><$36><$0A><$64> Thanks! Let's<LINE>
+ trade right now!<WAIT>
 
-<CLEAR_FLAG><$00><$36><SET_FLAG><$01><$64> Bomberman handed over<LINE> the Teriyaki Beef.<SFX><$0C><WAIT>
+<CLEAR_FLAG><$00><$36><SET_FLAG><$01><$64> Bomberman hands<LINE>
+ over TeriyakiBeef.<SFX><$0C><WAIT>
 
- Bomberman got a<LINE> Heart Container!<SFX><$0C><ADD_MAX_HP><$02><ADD_HP><$20><SFX><$30><WAIT>
+ Bomberman gets a<LINE>
+ Heart.<SFX><$0C><ADD_MAX_HP><$02><ADD_HP><$20><SFX><$30><WAIT>
 
- Thank you so much!<LINE> I'm truly grateful.<END>
+ Thanks, I really<LINE>
+ appreciate it!<END>
 
 
 //POINTER #98 @ $1D2B48 - STRING #98 @ $1D2238
 
 #WRITE(GBA,$1D2B48)
- Aw, that's a shame...<LINE> Come back if you change your mind.<END>
+ Too bad. Come back<LINE>
+ anytime!<END>
 
 
 //POINTER #99 @ $1D2B4C - STRING #99 @ $1D2257
 
 #WRITE(GBA,$1D2B4C)
- Thank you so much!<LINE> I'm truly grateful.<END>
+ Thanks, I really<LINE>
+ appreciate it!<END>
 
 
 //POINTER #100 @ $1D2B50 - STRING #100 @ $1D226F
 
 #WRITE(GBA,$1D2B50)
- Come back once you<LINE> get some Teriyaki Beef.<END>
+ Come back when you<LINE>
+ got Teriyaki Beef.<END>
 
 
 //POINTER #101 @ $1D2B54 - STRING #101 @ $1D2287
@@ -1194,13 +1530,15 @@
 #WRITE(GBA,$1D2B54)
 <ADD_HP><$20><SFX><$30><WAIT>
 
- Hmm... I wonder if I should look for an<LINE> even harder place to enter...<END>
+ Gotta find a<LINE>
+ harder place!<END>
 
 
 //POINTER #102 @ $1D2B58 - STRING #102 @ $1D228E
 
 #WRITE(GBA,$1D2B58)
- Hmm... I wonder if I should look for an<LINE> even harder place to enter...<END>
+ Gotta find a<LINE>
+ harder place!<END>
 
 
 //POINTER #103 @ $1D2B5C - STRING #103 @ $1D22AE
@@ -1218,181 +1556,235 @@
 //POINTER #105 @ $1D2B64 - STRING #105 @ $1D22B2
 
 #WRITE(GBA,$1D2B64)
-<JUMP_FLAG_SET><$01><$72><$0A><$6C><SET_FLAG><$01><$72> Myumyu~ Someone help myu~<WAIT>
+<JUMP_FLAG_SET><$01><$72><$0A><$6C><SET_FLAG><$01><$72> Help! Help me!<WAIT>
 
-<ANIMATE><$02> Ah! You there! You came<LINE> at a good time myu~ Help myu~<WAIT>
+<ANIMATE><$02> Hey you! Could you<LINE>
+ help me out?<WAIT>
 
- If you touch these guys, you'll be<LINE> tossed right out of the room myu~<WAIT>
+ If they touch you,<LINE>
+ you're thrown out!<WAIT>
 
- I need you to dodge them and make<LINE> your way over to me myu~<WAIT>
+ So evade them and<LINE>
+ come to me!<WAIT>
 
- I'm counting on you myu~<END>
+ Please! Please!<LINE>
+ Please! Please!<END>
 
 
 //POINTER #106 @ $1D2B68 - STRING #106 @ $1D2342
 
 #WRITE(GBA,$1D2B68)
-<SFX><$4C> Bomberman got the<LINE> Friendship Medallion!<WAIT>
+<SFX><$4C> Bomberman gets the<LINE>
+ Friendship Medal!<WAIT>
 
- Bomberman's max hearts<LINE> increased by 1!<END>
+ Bomberman gets<LINE>
+ another heart!<END>
 
 
 //POINTER #107 @ $1D2B6C - STRING #107 @ $1D237F
 
 #WRITE(GBA,$1D2B6C)
- If you have the 4 Medallions,<LINE> you can reach the Sky Castle...<WAIT>
+ If you've got 4<LINE>
+ medals, you can<WAIT>
 
- from the place to ascend to the sky.<WAIT>
+ go to Fantasy!<WAIT>
 
- There, the Ultimate Weapon they<LINE> are building...<WAIT>
+ The Ultimate<LINE>
+ Weapon is being<WAIT>
 
- is on the verge of being completed.<WAIT>
+ completed there<LINE>
+ right now!<WAIT>
 
- If the Ultimate Weapon<LINE> is completed...<WAIT>
+ If they complete<LINE>
+ it,<WAIT>
 
- we likely won't be able to<LINE> stop them anymore...<WAIT>
+ they will be<LINE>
+ unstoppable!<WAIT>
 
- Head to the desert to reach the<LINE> place to ascend to the sky.<WAIT>
+ Use the new road<LINE>
+ in the desert to<WAIT>
 
- A new path should have opened up.<END>
+ get access to<LINE>
+ Fantasy!<END>
 
 
 //POINTER #108 @ $1D2B70 - STRING #108 @ $1D243E
 
 #WRITE(GBA,$1D2B70)
- Myumyu~ Someone help myu~<WAIT>
+ Someone help!<LINE>
+ Please!!<WAIT>
 
-<ANIMATE><$02> Ah! It's the one who failed earlier!<LINE> Please get it right this time myu~<END>
+<ANIMATE><$02> Oh, you again.<LINE>
+ Don't fail me now!<END>
 
 
 //POINTER #109 @ $1D2B74 - STRING #109 @ $1D2475
 
 #WRITE(GBA,$1D2B74)
- Oh? Looks like the volcano's<LINE> eruption has calmed down.<END>
+ Huh? The eruption<LINE>
+ has stopped!<END>
 
 
 //POINTER #110 @ $1D2B78 - STRING #110 @ $1D248D
 
 #WRITE(GBA,$1D2B78)
- The volcanic bombs have stopped<LINE> falling! Thank goodness!<WAIT>
+ No more lava!<LINE>
+ Hooray! Hooray!<WAIT>
 
- ...Actually, to tell the truth, I feel<LINE> like something's missing now.<END>
+ Oh, is that all?<END>
 
 
 //POINTER #111 @ $1D2B7C - STRING #111 @ $1D24CB
 
 #WRITE(GBA,$1D2B7C)
-<JUMP_FULL_HEALTH><$0A><$72> Listen to this!<WAIT>
+<JUMP_FULL_HEALTH><$0A><$72> Listen a minute...<WAIT>
 
- I was finally getting along and<LINE> playing nicely with the Karabons...<WAIT>
+ I was playing with<LINE>
+ Karabons when<WAIT>
 
- but some weird people came and<LINE> ruined our playground!<WAIT>
+ some guys wrecked<LINE>
+ the playground and<WAIT>
 
- And they even built an ugly<LINE> building over it! Unforgivable!<WAIT>
+ built this ugly<LINE>
+ building!<WAIT>
 
- *Sigh*... I wonder if the Karabons they<LINE> captured are safe... I'm so worried.<WAIT>
+ I worry about my<LINE>
+ Karabons!<WAIT>
 
- ...Oh? Are you hurt?<LINE>
- ...Hold still for a second.♥<HEAL><SFX><$30><WAIT>
+ Are you hurt?<LINE>
+ Hold still...<HEAL><SFX><$30><WAIT>
 
- There, all better! Be careful not to<LINE> get yourself hurt too much, okay?♥<END>
+ There you go...<LINE>
+ Be careful!<END>
 
 
 //POINTER #112 @ $1D2B80 - STRING #112 @ $1D25B3
 
 #WRITE(GBA,$1D2B80)
- Do you know this town's specialty?<WAIT>
+ Know what's famous<LINE>
+ around here?<WAIT>
 
- The answer is delicious Teriyaki Beef.<LINE> It's got perfect flavor and portion size!<WAIT>
+ Teriyaki Beef,<LINE>
+ of course!<WAIT>
 
- You can only find it at the shop in this<LINE> town. How about some for a souvenir?<END>
+ You can only get<LINE>
+ it here!<END>
 
 
 //POINTER #113 @ $1D2B84 - STRING #113 @ $1D260A
 
 #WRITE(GBA,$1D2B84)
- Speaking of which, do you<LINE> know about the Phantom Oasis?<WAIT>
+ Do you know of<LINE>
+ Phantom Oasis?<WAIT>
 
- I hear there's an oasis in the desert<LINE> that constantly moves around.<WAIT>
+ It's an oasis that<LINE>
+ actually moves!<WAIT>
 
- It disappears from where it just was,<LINE> and appears where it wasn't before.<WAIT>
+ Never in the same<LINE>
+ place!<WAIT>
 
- It sounds so mystical...<LINE> I'd love to see it for myself someday...<END>
+ How mysterious!<END>
 
 
 //POINTER #114 @ $1D2B88 - STRING #114 @ $1D2691
 
 #WRITE(GBA,$1D2B88)
- Listen to this!<WAIT>
+ Wait a minute!<WAIT>
 
- I was finally getting along and<LINE> playing nicely with the Karabons...<WAIT>
+ I was playing with<LINE>
+ Karabons when<WAIT>
 
- but some weird people came and<LINE> ruined our playground!<WAIT>
+ some guys wrecked<LINE>
+ the playground and<WAIT>
 
- And they even built an ugly<LINE> building over it! Unforgivable!<WAIT>
+ built this ugly<LINE>
+ building!<WAIT>
 
- *Sigh*... I wonder if the Karabons they<LINE> captured are safe... I'm so worried.<END>
+ I worry about my<LINE>
+ Karabons!<END>
 
 
 //POINTER #115 @ $1D2B8C - STRING #115 @ $1D2729
 
 #WRITE(GBA,$1D2B8C)
- Hey, I heard you listened to<LINE> Mr. Tekuji's request.<WAIT>
+ Have you done a<LINE>
+ favor for Tekuji?<WAIT>
 
- Eh? He said you could take Sea Balloon<LINE> with you as a reward?<WAIT>
+ He let you take<LINE>
+ Sibaloon?<WAIT>
 
- Well, that's great!<LINE> Make sure you treat it well!<END>
+ Very lucky! Take<LINE>
+ good care of him!<END>
 
 
 //POINTER #116 @ $1D2B90 - STRING #116 @ $1D278F
 
 #WRITE(GBA,$1D2B90)
- You want to go to the place to<LINE> ascend to the sky?<WAIT>
+ Wanna go to<LINE>
+ Fantasy?<WAIT>
 
- To get there, you must head south<LINE> and pass through Theta Town.<WAIT>
+ Go South through<LINE>
+ Theta.<WAIT>
 
- That path was buried by the earthquake<LINE> during the eruption earlier, but...<WAIT>
+ The road has since<LINE>
+ been buried.<WAIT>
 
- it seems that last earthquake<LINE> opened the path up again.<END>
+ But it has become<LINE>
+ passable again.<END>
 
 
 //POINTER #117 @ $1D2B94 - STRING #117 @ $1D280E
 
 #WRITE(GBA,$1D2B94)
- Have you gotten used to<LINE> using the Rainbow Bridge?<WAIT>
+ Used the Rainbow<LINE>
+ Bridge yet?<WAIT>
 
- Come to think of it, right in the middle<LINE> of Zabuzabu Lake west of Alpha Town...<WAIT>
+ Oh! In the lake,<LINE>
+ East of Alpha<WAIT>
 
- there seems to be a place you can only<LINE> reach by using the Rainbow Bridge.<WAIT>
+ there's a place to<LINE>
+ build a bridge.<WAIT>
 
- If you're interested, why don't<LINE> you go back and check it out sometime?<WAIT>
+ Why don't you go<LINE>
+ back and try?<WAIT>
 
- Oh, you already went? Isn't it nice<LINE> to backtrack every once in a while?<END>
+ It's good to go<LINE>
+ back and check...<END>
 
 
 //POINTER #118 @ $1D2B98 - STRING #118 @ $1D28B4
 
 #WRITE(GBA,$1D2B98)
- Ahh... The giant finally woke<LINE> up and went somewhere...<WAIT>
+ The giant finally<LINE>
+ woke up!<WAIT>
 
- I didn't want to blame him, but I was<LINE> really troubled by how dark the room got.<WAIT>
+ He made my room<LINE>
+ pitch black!<WAIT>
 
- ...So in the end, what was it<LINE> that he wanted to eat?<END>
+ What did he want<LINE>
+ to eat?<END>
 
 
 //POINTER #119 @ $1D2B9C - STRING #119 @ $1D291E
 
 #WRITE(GBA,$1D2B9C)
- Did you hear? I thought I hadn't seen<LINE> Master Marine Eel for a while, but...<WAIT>
+ They say the giant<LINE>
+ was blocking <WAIT>
 
- rumor has it a giant was blocking<LINE> the entrance to his shrine.<WAIT>
+ Unagi's front door!<WAIT>
 
- I hardly ever leave my house,<LINE> so I had no idea.<END>
+ I don't get out<LINE>
+ much...<END>
 
 
 //POINTER #120 @ $1D2BA0 - STRING #120 @ $1D2983
 
 #WRITE(GBA,$1D2BA0)
- Hoho, did you come to see<LINE> Master Marine Eel?<WAIT>
+ You here to see<LINE>
+ Unagi?<WAIT>
 
- Master Marine Eel's home is<LINE> the shrine furthest in the back.<END>
+ He's in the back of<LINE>
+ the shrine.<END>
+
+
+

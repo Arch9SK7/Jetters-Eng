@@ -22,71 +22,72 @@
 //POINTER #0 @ $1BDE58 - STRING #0 @ $1BDD30
 
 #WRITE(GBA,$1BDE58)
-Will the fire Ceedrun breathes shoot upward?<LINE>
-Predict if it's coming low, and guard!<WAIT>
+ Will Ceedrun spit<LINE>
+ fire up or down?<WAIT>
 
-<NEXT>
+ <NEXT>
 
 
 //POINTER #1 @ $1BDE5C - STRING #1 @ $1BDD5E
 
 #WRITE(GBA,$1BDE5C)
-Block successfully 3 times and Bomberman wins<LINE>
-Fail 3 times and Ceedrun wins.<WAIT>
+ 3 guards, you win.<LINE>
+ 3 misses you lose.<WAIT>
 
-<NEXT>
+ <NEXT>
 
 
 //POINTER #2 @ $1BDE60 - STRING #2 @ $1BDD92
 
 #WRITE(GBA,$1BDE60)
-Now then, high or low!?<NEXT>
+ Which will it be?<LINE>
+ Up or down?<NEXT>
 
 
 //POINTER #3 @ $1BDE64 - STRING #3 @ $1BDD9F
 
 #WRITE(GBA,$1BDE64)
-Yes! Guard successful! Bomberman<LINE>
-blocked Ceedrun's fire!<WAIT>
+ Nice guard!<WAIT>
 
-<NEXT>
+ <NEXT>
 
 
 //POINTER #4 @ $1BDE68 - STRING #4 @ $1BDDC9
 
 #WRITE(GBA,$1BDE68)
-Bomberman gets 1 point!<WAIT>
+ 1 point for<LINE>
+ Bomberman!<WAIT>
 
-<NEXT>
+ <NEXT>
 
 
 //POINTER #5 @ $1BDE6C - STRING #5 @ $1BDDDC
 
 #WRITE(GBA,$1BDE6C)
-Oh no! Guard failed! Bomberman<LINE>
-couldn't block Ceedrun's fire!<WAIT>
+ Ow! That's hot!!<WAIT>
 
-<NEXT>
+ <NEXT>
 
 
 //POINTER #6 @ $1BDE70 - STRING #6 @ $1BDE0A
 
 #WRITE(GBA,$1BDE70)
-Ceedrun gets 1 point.<WAIT>
+1 point for<LINE>
+ Ceedrun.<WAIT>
 
-<NEXT>
+ <NEXT>
 
 
 //POINTER #7 @ $1BDE74 - STRING #7 @ $1BDE1B
 
 #WRITE(GBA,$1BDE74)
-Bomberman gets 3 points!<LINE>
-Bomberman wins!<END>
+ Bomberman wins!<LINE>
+ Nice defense!<END>
 
 
 //POINTER #8 @ $1BDE78 - STRING #8 @ $1BDE3A
 
 #WRITE(GBA,$1BDE78)
-Ceedrun gets 3 points!<LINE>
-Ceedrun wins!<END>
+ Ceedrun wins!<LINE>
+ You're toast!<END>
 

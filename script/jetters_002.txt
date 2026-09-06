@@ -40,7 +40,7 @@ Elifan<END>
 //POINTER #3 @ $1BDC74 - STRING #3 @ $1BDAF8
 
 #WRITE(GBA,$1BDC74)
-Pommy Fangs<END>
+P.Fangs<END>
 
 
 //POINTER #4 @ $1BDC78 - STRING #4 @ $1BDB00
@@ -52,31 +52,31 @@ Sharkun<END>
 //POINTER #5 @ $1BDC7C - STRING #5 @ $1BDB06
 
 #WRITE(GBA,$1BDC7C)
-Thunder Liger<END>
+Th.Liger<END>
 
 
 //POINTER #6 @ $1BDC80 - STRING #6 @ $1BDB0F
 
 #WRITE(GBA,$1BDC80)
-Kai-Man<END>
+Kai-man<END>
 
 
 //POINTER #7 @ $1BDC84 - STRING #7 @ $1BDB13
 
 #WRITE(GBA,$1BDC84)
-Twin Dragons<END>
+TwinDrag<END>
 
 
 //POINTER #8 @ $1BDC88 - STRING #8 @ $1BDB1B
 
 #WRITE(GBA,$1BDC88)
-Pommy Nucklz<END>
+P.Nucklz<END>
 
 
 //POINTER #9 @ $1BDC8C - STRING #9 @ $1BDB23
 
 #WRITE(GBA,$1BDC8C)
-Pommy Sea<END>
+P.Sea<END>
 
 
 //POINTER #10 @ $1BDC90 - STRING #10 @ $1BDB29
@@ -88,7 +88,7 @@ ToughGuy<END>
 //POINTER #11 @ $1BDC94 - STRING #11 @ $1BDB2F
 
 #WRITE(GBA,$1BDC94)
-Pommy Beast<END>
+P.Beast<END>
 
 
 //POINTER #12 @ $1BDC98 - STRING #12 @ $1BDB37
@@ -106,7 +106,7 @@ Dorako<END>
 //POINTER #14 @ $1BDCA0 - STRING #14 @ $1BDB41
 
 #WRITE(GBA,$1BDCA0)
-Pommy Dragon<END>
+P.Dragon<END>
 
 
 //POINTER #15 @ $1BDCA4 - STRING #15 @ $1BDB49
@@ -124,7 +124,7 @@ Sibaloon<END>
 //POINTER #17 @ $1BDCAC - STRING #17 @ $1BDB57
 
 #WRITE(GBA,$1BDCAC)
-Pommy Animal<END>
+P.Animal<END>
 
 
 //POINTER #18 @ $1BDCB0 - STRING #18 @ $1BDB5F
@@ -148,13 +148,13 @@ Youni<END>
 //POINTER #21 @ $1BDCBC - STRING #21 @ $1BDB73
 
 #WRITE(GBA,$1BDCBC)
-Sea Wing<END>
+SeaWing<END>
 
 
 //POINTER #22 @ $1BDCC0 - STRING #22 @ $1BDB7A
 
 #WRITE(GBA,$1BDCC0)
-KaneKing<END>
+KameKing<END>
 
 
 //POINTER #23 @ $1BDCC4 - STRING #23 @ $1BDB82
@@ -172,149 +172,149 @@ FireKong<END>
 //POINTER Attacks #25 @ $1BDCCC - STRING #25 @ $1BDB91
 
 #WRITE(GBA,$1BDCCC)
-Thunderhead<END>
+Electric<END>
 
 
 //POINTER #26 @ $1BDCD0 - STRING #26 @ $1BDB99
 
 #WRITE(GBA,$1BDCD0)
-Burning Spin<END>
+Flame<END>
 
 
 //POINTER #27 @ $1BDCD4 - STRING #27 @ $1BDBA2
 
 #WRITE(GBA,$1BDCD4)
-Grand Shaker<END>
+Quake<END>
 
 
 //POINTER #28 @ $1BDCD8 - STRING #28 @ $1BDBAB
 
 #WRITE(GBA,$1BDCD8)
-Thunder Cutter<END>
+Shake<END>
 
 
 //POINTER #29 @ $1BDCDC - STRING #29 @ $1BDBB4
 
 #WRITE(GBA,$1BDCDC)
-Ice Slugger<END>
+Icicle<END>
 
 
 //POINTER #30 @ $1BDCE0 - STRING #30 @ $1BDBBC
 
 #WRITE(GBA,$1BDCE0)
-Fire Ring<END>
+FireRing<END>
 
 
 //POINTER #31 @ $1BDCE4 - STRING #31 @ $1BDBC5
 
 #WRITE(GBA,$1BDCE4)
-Aqua Bomber<END>
+Wave<END>
 
 
 //POINTER #32 @ $1BDCE8 - STRING #32 @ $1BDBCD
 
 #WRITE(GBA,$1BDCE8)
-Double Fire<END>
+Dbl Fire<END>
 
 
 //POINTER #33 @ $1BDCEC - STRING #33 @ $1BDBD6
 
 #WRITE(GBA,$1BDCEC)
-Thunder Punch<END>
+Bolt<END>
 
 
 //POINTER #34 @ $1BDCF0 - STRING #34 @ $1BDBDE
 
 #WRITE(GBA,$1BDCF0)
-Heavy Call<END>
+Storm<END>
 
 
 //POINTER #35 @ $1BDCF4 - STRING #35 @ $1BDBE6
 
 #WRITE(GBA,$1BDCF4)
-Megaton Stone<END>
+Boulder<END>
 
 
 //POINTER #36 @ $1BDCF8 - STRING #36 @ $1BDBEF
 
 #WRITE(GBA,$1BDCF8)
-Thunder Spin<END>
+Stunball<END>
 
 
 //POINTER #37 @ $1BDCFC - STRING #37 @ $1BDBF7
 
 #WRITE(GBA,$1BDCFC)
-Fire Bow<END>
+FireBow<END>
 
 
 //POINTER #38 @ $1BDD00 - STRING #38 @ $1BDBFF
 
 #WRITE(GBA,$1BDD00)
-Heat Fire<END>
+HeatFire<END>
 
 
 //POINTER #39 @ $1BDD04 - STRING #39 @ $1BDC08
 
 #WRITE(GBA,$1BDD04)
-Sanders Call<END>
+Squall<END>
 
 
 //POINTER #40 @ $1BDD08 - STRING #40 @ $1BDC11
 
 #WRITE(GBA,$1BDD08)
-Heavy Hurricane<END>
+Monsoon<END>
 
 
 //POINTER #41 @ $1BDD0C - STRING #41 @ $1BDC1A
 
 #WRITE(GBA,$1BDD0C)
-Bubble Shower<END>
+Bubbles<END>
 
 
 //POINTER #42 @ $1BDD10 - STRING #42 @ $1BDC22
 
 #WRITE(GBA,$1BDD10)
-Thunder Attack<END>
+Thunder<END>
 
 
 //POINTER #43 @ $1BDD14 - STRING #43 @ $1BDC2B
 
 #WRITE(GBA,$1BDD14)
-Mud Blizzard<END>
+Blizzard<END>
 
 
 //POINTER #44 @ $1BDD18 - STRING #44 @ $1BDC34
 
 #WRITE(GBA,$1BDD18)
-Plasma Knuckle<END>
+Plasma<END>
 
 
 //POINTER #45 @ $1BDD1C - STRING #45 @ $1BDC3D
 
 #WRITE(GBA,$1BDD1C)
-Jet Typhoon<END>
+Typhoon<END>
 
 
 //POINTER #46 @ $1BDD20 - STRING #46 @ $1BDC47
 
 #WRITE(GBA,$1BDD20)
-Aqua Spiral<END>
+Whirl<END>
 
 
 //POINTER #47 @ $1BDD24 - STRING #47 @ $1BDC50
 
 #WRITE(GBA,$1BDD24)
-Spin Attack<END>
+Spin<END>
 
 
 //POINTER #48 @ $1BDD28 - STRING #48 @ $1BDC58
 
 #WRITE(GBA,$1BDD28)
-Marine Bomb<END>
+AquaBomb<END>
 
 
 //POINTER #49 @ $1BDD2C - STRING #49 @ $1BDC5E
 
 #WRITE(GBA,$1BDD2C)
-Heat Dash<END>
+HeatDash<END>
 
