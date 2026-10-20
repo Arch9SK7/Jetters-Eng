@@ -15,13 +15,13 @@ Bomberman Jetters Translation Project
 * Well for starters, I fixed a few script errors with lines running over one another in a few locations in the game or minor translation errors (I went and 100% the game to find them all).
 * I translated the rest of the graphic screens I could find that players will run into. ex. Title screen, the entire multiplayer mode and even the debug menu.
 * This was a very big learning experience for me from the Nintendo Switch hacking I do, so I needed to learn lots and even make tools that may or may not be necessary due to my own ignorance but helped me get this job done.
-* There are some graphic issues with disabled tile spots in multiplayer/minigame graphics so there are holes in my graphics, but they work to convey what is needed.
-* I cannot for the life of me get any debugger to work for GBA so I can't fix these inactive tiles. (Offer help if you want/can)
+* The "inactive tile" holes in the multiplayer/minigame text sprites (READY, START!, CLEAR, TIME UP, DRAW and the Moto Jetter text) can now be fixed. The game only draws the tiles its sprite frames point at, and those frames were built around the Japanese text. The new **Sprite Editor** rebuilds the frames around the English graphics, so every tile gets drawn.
+* Fixed a script bug where `jetters_008.txt` overflowed into `jetters_009.txt` (and 009 into 010), which made about 35 Karabon ability descriptions show the wrong text. The build now checks for this automatically.
 * Tested on Nintendo Switch NSO custom injection, mGBA/BizHawk, and Official hardware.
 
 ## 🛠 Prerequisites
 To build the ROM from source, your system requires:
-* **Python 3.x:** Required to execute the graphic extraction and recompression scripts.
+* **Python 3.x + Pillow:** Required to execute the graphic extraction and recompression scripts, and to run the Sprite Editor. Install Pillow with `pip install pillow`.
 * **A Clean ROM:** A legally obtained, unmodified `Bomberman Jetters - Densetsu no Bomberman (Japan).gba` ROM file.
 * **VC++ 10.0:** Windows users may need this to run Atlas: [Download Here](https://www.microsoft.com/en-us/download/details.aspx?id=26999).
 
@@ -30,9 +30,13 @@ All active, stripped graphics and modified assets are pre-configured in this rep
 
 **Start Here:** Place a clean copy of the ROM named `jetters.gba` in the root folder.
 
-**For Windows:**
-1. Double-click `build.bat`. 
-2. The script will automatically process the Python graphic injections, compile the text, and output `jetters_eng.gba`.
+**For Windows (recommended): Sprite Editor**
+1. Double-click `SpriteEditor.bat`. The editor opens in your web browser (it only runs on your own PC).
+2. Press **▶ Build & Test** at the top right. It saves your edits, runs the full build with the fixed sprite graphics, and starts `jetters_eng.gba` in your emulator. You can set the emulator with the ⚙ button; otherwise Windows' default program for `.gba` files is used.
+
+**For Windows: build.bat only**
+1. Double-click `build.bat`.
+2. The script will automatically process the Python graphic injections, build the fixed sprite frames and tilemaps, check the script for overlaps, compile the text, and output `jetters_eng.gba`. It stops with a message if anything fails.
 
 **For macOS & Linux:**
 Because this project utilizes a mix of Python scripts and Windows binaries (`.exe` utilities like Atlas and armips), you will need [Wine](https://www.winehq.org/) installed to run the compilation tools.
@@ -43,6 +47,15 @@ Because this project utilizes a mix of Python scripts and Windows binaries (`.ex
 ### Additional Scripts
 * **Extract:** Run `extract.bat` and extracted files will appear in the extract folder.
 * **Dump Script:** Run `dump_script\dump_script.bat`.
+* **Script Check:** Run `python tools\check_script.py` to see how full each script file's space is, catch files that overlap, and list the widest lines (`--width 184` lists every line wider than the dialogue box).
+
+## 🎨 Sprite Editor
+`SpriteEditor.bat` opens an editor for the translation's graphics and text, with three tabs:
+* **Sprites:** view every frame the way the GBA draws it, play the game's real animations, and see which tiles are inactive (drawn in red). For text sprites, paint the full English word in its image and press **Relayout**. It repacks the graphic and rebuilds every frame around your art, keeping the original animation. Set up for READY/START! (MPText), CLEAR (MPClear), TIME UP and DRAW, and the Moto Jetter READY/START/CLEAR. Pieces can also be moved, added and removed by hand.
+* **Tilemaps:** paint background maps (a tile sheet BMP plus its `.bin` map) to show tiles the map never used. The Story mode minigame HIGH-SCORE/TIME bar is set up; more can be added with **+ Map**.
+* **Script:** preview every string in the real dialogue box using the game's font and letter widths. Lines that run off the box, pages with too many lines, and characters missing from the table are marked, and you can edit and save the text right there.
+
+Edits are saved as plain files in the `sprites` folder, and the build writes them into the ROM, so `build.bat` and **Build & Test** always produce the fixed graphics.
 
 ## 💾 Manual Patching Guide
 If you prefer to skip the build process and just patch a clean ROM yourself, pre-compiled patches are available in multiple formats in the Releases section. 
