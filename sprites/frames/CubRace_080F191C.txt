@@ -1,0 +1,354 @@
+# Sprite frames for CubRace, frame table 0x080F191C
+# One "frame N" block per frame; pieces are drawn first-listed on top.
+# piece x/y = offset from the object origin, size = WxH in pixels,
+# tile = top-left tile in the sheet (sheet is 32 tiles wide: tile below N is N+32).
+# "rect" lines are also accepted: rect x=.. y=.. tile=.. cols=.. rows=.. [pal flag prio]
+#   -> split automatically into 8x8/16x8/32x8 pieces (empty tiles skipped when a sheet is set).
+# Cub race minigame (bank 5 entry 74). Text tiles are rows 3-5 of the sheet; the other frames are character animation.
+table 0x080F191C
+
+frame 0
+  piece x=-16 y=-4 size=32x8 tile=64 flag=0xFF
+  piece x=-8 y=-5 size=16x8 tile=87 flag=0xFF
+  piece x=-16 y=-20 size=32x16 tile=0 flag=0xFF
+
+frame 1
+  piece x=0 y=-20 size=8x8 tile=89 flag=0xFF
+  piece x=-16 y=-4 size=32x8 tile=64 flag=0xFF
+  piece x=-8 y=-5 size=16x8 tile=87 flag=0xFF
+  piece x=-16 y=-20 size=32x16 tile=0 flag=0xFF
+
+frame 2
+  piece x=-13 y=-6 size=32x8 tile=68 flag=0xFF
+  piece x=-13 y=-22 size=32x16 tile=4 flag=0xFF
+  piece x=-9 y=-5 size=16x8 tile=87 flag=0xFF
+
+frame 3
+  piece x=-16 y=-7 size=32x8 tile=72 flag=0xFF
+  piece x=-16 y=-23 size=32x16 tile=8 flag=0xFF
+  piece x=-8 y=-5 size=16x8 tile=87 flag=0xFF
+
+frame 4
+  piece x=-16 y=-7 size=32x8 tile=76 flag=0xFF
+  piece x=-16 y=-23 size=32x16 tile=12 flag=0xFF
+  piece x=-8 y=-5 size=16x8 tile=87 flag=0xFF
+
+frame 5
+  piece x=-15 y=-7 size=32x8 tile=80 flag=0xFF
+  piece x=-15 y=-23 size=32x16 tile=16 flag=0xFF
+  piece x=-8 y=-5 size=16x8 tile=87 flag=0xFF
+
+frame 6
+  piece x=0 y=0 size=8x8 tile=86 pal=2 flag=0xFF
+
+frame 7
+  piece x=-2 y=-1 size=16x8 tile=84 pal=1 flag=0xFF
+
+frame 8
+
+frame 9
+
+frame 10
+  piece x=-16 y=-8 size=8x8 tile=63 pal=2 flag=0xFF
+
+frame 11
+  piece x=-24 y=-16 size=16x16 tile=28 pal=2 flag=0xFF
+
+frame 12
+  piece x=-24 y=-16 size=16x16 tile=24 pal=2 flag=0xFF
+
+frame 13
+  piece x=-24 y=-16 size=16x16 tile=26 pal=2 flag=0xFF
+
+frame 14
+  piece x=-24 y=-16 size=16x16 tile=22 pal=2 flag=0xFF
+
+frame 15
+  piece x=-24 y=-16 size=16x16 tile=20 pal=2 flag=0xFF
+
+frame 16
+  piece x=0 y=4 size=32x8 tile=164 pal=3 flag=0xFF
+  piece x=-32 y=4 size=32x8 tile=160 pal=3 flag=0xFF
+  piece x=0 y=-12 size=32x16 tile=100 pal=3 flag=0xFF
+  piece x=-32 y=-12 size=32x16 tile=96 pal=3 flag=0xFF
+
+frame 17
+  piece x=-16 y=0 size=32x8 tile=164 pal=3 flag=0xFF a0x=0x02
+  piece x=-48 y=0 size=32x8 tile=160 pal=3 flag=0xFF a0x=0x02
+  piece x=-16 y=-20 size=32x16 tile=100 pal=3 flag=0xFF a0x=0x02
+  piece x=-48 y=-20 size=32x16 tile=96 pal=3 flag=0xFF a0x=0x02
+
+frame 18
+  piece x=0 y=4 size=32x8 tile=172 pal=3 flag=0xFF
+  piece x=-32 y=4 size=32x8 tile=168 pal=3 flag=0xFF
+  piece x=0 y=-12 size=32x16 tile=108 pal=3 flag=0xFF
+  piece x=-32 y=-12 size=32x16 tile=104 pal=3 flag=0xFF
+
+frame 19
+  piece x=-16 y=0 size=32x8 tile=172 pal=3 flag=0xFF a0x=0x02
+  piece x=-48 y=0 size=32x8 tile=168 pal=3 flag=0xFF a0x=0x02
+  piece x=-16 y=-20 size=32x16 tile=108 pal=3 flag=0xFF a0x=0x02
+  piece x=-48 y=-20 size=32x16 tile=104 pal=3 flag=0xFF a0x=0x02
+
+frame 20
+  piece x=-8 y=5 size=8x8 tile=178 pal=3 flag=0x00
+  piece x=-24 y=5 size=16x8 tile=176 pal=3 flag=0x00
+  piece x=-8 y=-2 size=8x16 tile=114 pal=3 flag=0x00
+  piece x=-24 y=-2 size=16x16 tile=112 pal=3 flag=0x00
+
+frame 21
+  piece x=-8 y=5 size=8x8 tile=178 pal=3 flag=0x01
+  piece x=-24 y=5 size=16x8 tile=176 pal=3 flag=0x01
+  piece x=-8 y=-5 size=8x16 tile=114 pal=3 flag=0x01
+  piece x=-24 y=-5 size=16x16 tile=112 pal=3 flag=0x01
+
+frame 22
+  piece x=-8 y=4 size=8x8 tile=178 pal=3 flag=0x02
+  piece x=-24 y=4 size=16x8 tile=176 pal=3 flag=0x02
+  piece x=-8 y=-9 size=8x16 tile=114 pal=3 flag=0x02
+  piece x=-24 y=-9 size=16x16 tile=112 pal=3 flag=0x02
+
+frame 23
+  piece x=16 y=5 size=8x8 tile=181 pal=3 flag=0x03
+  piece x=0 y=5 size=16x8 tile=179 pal=3 flag=0x03
+  piece x=16 y=-2 size=8x16 tile=117 pal=3 flag=0x03
+  piece x=0 y=-2 size=16x16 tile=115 pal=3 flag=0x03
+  piece x=-8 y=4 size=8x8 tile=178 pal=3 flag=0xFF
+  piece x=-24 y=4 size=16x8 tile=176 pal=3 flag=0xFF
+  piece x=-8 y=-12 size=8x16 tile=114 pal=3 flag=0xFF
+  piece x=-24 y=-12 size=16x16 tile=112 pal=3 flag=0xFF
+
+frame 24
+  piece x=16 y=5 size=8x8 tile=181 pal=3 flag=0x04
+  piece x=0 y=5 size=16x8 tile=179 pal=3 flag=0x04
+  piece x=16 y=-5 size=8x16 tile=117 pal=3 flag=0x04
+  piece x=0 y=-5 size=16x16 tile=115 pal=3 flag=0x04
+  piece x=-8 y=3 size=8x8 tile=178 pal=3 flag=0xFF
+  piece x=-24 y=3 size=16x8 tile=176 pal=3 flag=0xFF
+  piece x=-8 y=-13 size=8x16 tile=114 pal=3 flag=0xFF
+  piece x=-24 y=-13 size=16x16 tile=112 pal=3 flag=0xFF
+
+frame 25
+  piece x=16 y=4 size=8x8 tile=181 pal=3 flag=0x05
+  piece x=0 y=4 size=16x8 tile=179 pal=3 flag=0x05
+  piece x=16 y=-9 size=8x16 tile=117 pal=3 flag=0x05
+  piece x=0 y=-9 size=16x16 tile=115 pal=3 flag=0x05
+  piece x=-8 y=2 size=8x8 tile=178 pal=3 flag=0xFF
+  piece x=-24 y=2 size=16x8 tile=176 pal=3 flag=0xFF
+  piece x=-8 y=-14 size=8x16 tile=114 pal=3 flag=0xFF
+  piece x=-24 y=-14 size=16x16 tile=112 pal=3 flag=0xFF
+
+frame 26
+  piece x=16 y=4 size=8x8 tile=181 pal=3 flag=0xFF
+  piece x=0 y=4 size=16x8 tile=179 pal=3 flag=0xFF
+  piece x=16 y=-12 size=8x16 tile=117 pal=3 flag=0xFF
+  piece x=0 y=-12 size=16x16 tile=115 pal=3 flag=0xFF
+  piece x=-8 y=2 size=8x8 tile=178 pal=3 flag=0xFF
+  piece x=-24 y=2 size=16x8 tile=176 pal=3 flag=0xFF
+  piece x=-8 y=-14 size=8x16 tile=114 pal=3 flag=0xFF
+  piece x=-24 y=-14 size=16x16 tile=112 pal=3 flag=0xFF
+
+frame 27
+  piece x=16 y=3 size=8x8 tile=181 pal=3 flag=0xFF
+  piece x=0 y=3 size=16x8 tile=179 pal=3 flag=0xFF
+  piece x=16 y=-13 size=8x16 tile=117 pal=3 flag=0xFF
+  piece x=0 y=-13 size=16x16 tile=115 pal=3 flag=0xFF
+  piece x=-8 y=3 size=8x8 tile=178 pal=3 flag=0xFF
+  piece x=-24 y=3 size=16x8 tile=176 pal=3 flag=0xFF
+  piece x=-8 y=-13 size=8x16 tile=114 pal=3 flag=0xFF
+  piece x=-24 y=-13 size=16x16 tile=112 pal=3 flag=0xFF
+
+frame 28
+  piece x=16 y=2 size=8x8 tile=181 pal=3 flag=0xFF
+  piece x=0 y=2 size=16x8 tile=179 pal=3 flag=0xFF
+  piece x=16 y=-14 size=8x16 tile=117 pal=3 flag=0xFF
+  piece x=0 y=-14 size=16x16 tile=115 pal=3 flag=0xFF
+  piece x=-8 y=4 size=8x8 tile=178 pal=3 flag=0xFF
+  piece x=-24 y=4 size=16x8 tile=176 pal=3 flag=0xFF
+  piece x=-8 y=-12 size=8x16 tile=114 pal=3 flag=0xFF
+  piece x=-24 y=-12 size=16x16 tile=112 pal=3 flag=0xFF
+
+frame 29
+  piece x=16 y=3 size=8x8 tile=181 pal=3 flag=0xFF
+  piece x=0 y=3 size=16x8 tile=179 pal=3 flag=0xFF
+  piece x=16 y=-13 size=8x16 tile=117 pal=3 flag=0xFF
+  piece x=0 y=-13 size=16x16 tile=115 pal=3 flag=0xFF
+  piece x=-8 y=4 size=8x8 tile=178 pal=3 flag=0xFF
+  piece x=-24 y=4 size=16x8 tile=176 pal=3 flag=0xFF
+  piece x=-8 y=-12 size=8x16 tile=114 pal=3 flag=0xFF
+  piece x=-24 y=-12 size=16x16 tile=112 pal=3 flag=0xFF
+
+frame 30
+  piece x=16 y=4 size=8x8 tile=181 pal=3 flag=0xFF
+  piece x=0 y=4 size=16x8 tile=179 pal=3 flag=0xFF
+  piece x=16 y=-12 size=8x16 tile=117 pal=3 flag=0xFF
+  piece x=0 y=-12 size=16x16 tile=115 pal=3 flag=0xFF
+  piece x=-8 y=4 size=8x8 tile=178 pal=3 flag=0xFF
+  piece x=-24 y=4 size=16x8 tile=176 pal=3 flag=0xFF
+  piece x=-8 y=-12 size=8x16 tile=114 pal=3 flag=0xFF
+  piece x=-24 y=-12 size=16x16 tile=112 pal=3 flag=0xFF
+
+frame 31
+  piece x=-12 y=-15 size=8x8 tile=184 pal=3 flag=0x06
+  piece x=-28 y=-15 size=16x8 tile=182 pal=3 flag=0x06
+  piece x=-12 y=-22 size=8x16 tile=120 pal=3 flag=0x06
+  piece x=-28 y=-22 size=16x16 tile=118 pal=3 flag=0x06
+
+frame 32
+  piece x=-12 y=-10 size=8x8 tile=184 pal=3 flag=0x07
+  piece x=-28 y=-10 size=16x8 tile=182 pal=3 flag=0x07
+  piece x=-12 y=-20 size=8x16 tile=120 pal=3 flag=0x07
+  piece x=-28 y=-20 size=16x16 tile=118 pal=3 flag=0x07
+
+frame 33
+  piece x=-12 y=-5 size=8x8 tile=184 pal=3 flag=0x08
+  piece x=-28 y=-5 size=16x8 tile=182 pal=3 flag=0x08
+  piece x=-12 y=-18 size=8x16 tile=120 pal=3 flag=0x08
+  piece x=-28 y=-18 size=16x16 tile=118 pal=3 flag=0x08
+
+frame 34
+  piece x=12 y=-15 size=8x8 tile=187 pal=3 flag=0x09
+  piece x=-4 y=-15 size=16x8 tile=185 pal=3 flag=0x09
+  piece x=12 y=-22 size=8x16 tile=123 pal=3 flag=0x09
+  piece x=-4 y=-22 size=16x16 tile=121 pal=3 flag=0x09
+  piece x=-12 y=0 size=8x8 tile=184 pal=3 flag=0xFF
+  piece x=-28 y=0 size=16x8 tile=182 pal=3 flag=0xFF
+  piece x=-12 y=-16 size=8x16 tile=120 pal=3 flag=0xFF
+  piece x=-28 y=-16 size=16x16 tile=118 pal=3 flag=0xFF
+
+frame 35
+  piece x=12 y=-10 size=8x8 tile=187 pal=3 flag=0x0A
+  piece x=-4 y=-10 size=16x8 tile=185 pal=3 flag=0x0A
+  piece x=12 y=-20 size=8x16 tile=123 pal=3 flag=0x0A
+  piece x=-4 y=-20 size=16x16 tile=121 pal=3 flag=0x0A
+  piece x=-13 y=1 size=8x8 tile=184 pal=3 flag=0x0B
+  piece x=-29 y=1 size=16x8 tile=182 pal=3 flag=0x0B
+  piece x=-13 y=-14 size=8x16 tile=120 pal=3 flag=0x0B
+  piece x=-29 y=-14 size=16x16 tile=118 pal=3 flag=0x0B
+
+frame 36
+  piece x=12 y=-5 size=8x8 tile=187 pal=3 flag=0x0C
+  piece x=-4 y=-5 size=16x8 tile=185 pal=3 flag=0x0C
+  piece x=12 y=-18 size=8x16 tile=123 pal=3 flag=0x0C
+  piece x=-4 y=-18 size=16x16 tile=121 pal=3 flag=0x0C
+  piece x=-13 y=1 size=8x8 tile=184 pal=3 flag=0x0D
+  piece x=-29 y=1 size=16x8 tile=182 pal=3 flag=0x0D
+  piece x=-13 y=-12 size=8x16 tile=120 pal=3 flag=0x0D
+  piece x=-29 y=-12 size=16x16 tile=118 pal=3 flag=0x0D
+
+frame 37
+  piece x=-13 y=1 size=8x8 tile=184 pal=3 flag=0x0E
+  piece x=-29 y=1 size=16x8 tile=182 pal=3 flag=0x0E
+  piece x=-13 y=-14 size=8x16 tile=120 pal=3 flag=0x0E
+  piece x=-29 y=-14 size=16x16 tile=118 pal=3 flag=0x0E
+  piece x=20 y=-12 size=16x8 tile=90 pal=3 flag=0x0F
+  piece x=12 y=0 size=8x8 tile=187 pal=3 flag=0xFF
+  piece x=-4 y=0 size=16x8 tile=185 pal=3 flag=0xFF
+  piece x=12 y=-16 size=8x16 tile=123 pal=3 flag=0xFF
+  piece x=-4 y=-16 size=16x16 tile=121 pal=3 flag=0xFF
+
+frame 38
+  piece x=20 y=-10 size=16x8 tile=90 pal=3 flag=0x10
+  piece x=12 y=1 size=8x8 tile=187 pal=3 flag=0x11
+  piece x=-4 y=1 size=16x8 tile=185 pal=3 flag=0x11
+  piece x=12 y=-14 size=8x16 tile=123 pal=3 flag=0x11
+  piece x=-4 y=-14 size=16x16 tile=121 pal=3 flag=0x11
+  piece x=-12 y=0 size=8x8 tile=184 pal=3 flag=0xFF
+  piece x=-28 y=0 size=16x8 tile=182 pal=3 flag=0xFF
+  piece x=-12 y=-16 size=8x16 tile=120 pal=3 flag=0xFF
+  piece x=-28 y=-16 size=16x16 tile=118 pal=3 flag=0xFF
+
+frame 39
+  piece x=20 y=-9 size=16x8 tile=90 pal=3 flag=0x12
+  piece x=12 y=1 size=8x8 tile=187 pal=3 flag=0x13
+  piece x=-4 y=1 size=16x8 tile=185 pal=3 flag=0x13
+  piece x=12 y=-12 size=8x16 tile=123 pal=3 flag=0x13
+  piece x=-4 y=-12 size=16x16 tile=121 pal=3 flag=0x13
+  piece x=-12 y=0 size=8x8 tile=184 pal=3 flag=0xFF
+  piece x=-28 y=0 size=16x8 tile=182 pal=3 flag=0xFF
+  piece x=-12 y=-16 size=8x16 tile=120 pal=3 flag=0xFF
+  piece x=-28 y=-16 size=16x16 tile=118 pal=3 flag=0xFF
+
+frame 40
+  piece x=12 y=1 size=8x8 tile=187 pal=3 flag=0x14
+  piece x=-4 y=1 size=16x8 tile=185 pal=3 flag=0x14
+  piece x=12 y=-14 size=8x16 tile=123 pal=3 flag=0x14
+  piece x=-4 y=-14 size=16x16 tile=121 pal=3 flag=0x14
+  piece x=20 y=-8 size=16x8 tile=90 pal=3 flag=0xFF
+  piece x=-12 y=0 size=8x8 tile=184 pal=3 flag=0xFF
+  piece x=-28 y=0 size=16x8 tile=182 pal=3 flag=0xFF
+  piece x=-12 y=-16 size=8x16 tile=120 pal=3 flag=0xFF
+  piece x=-28 y=-16 size=16x16 tile=118 pal=3 flag=0xFF
+
+frame 41
+  piece x=12 y=-11 size=16x8 tile=90 pal=3 flag=0x15 a0x=0x02
+  piece x=12 y=0 size=8x8 tile=187 pal=3 flag=0xFF
+  piece x=-4 y=0 size=16x8 tile=185 pal=3 flag=0xFF
+  piece x=12 y=-16 size=8x16 tile=123 pal=3 flag=0xFF
+  piece x=-4 y=-16 size=16x16 tile=121 pal=3 flag=0xFF
+  piece x=-12 y=0 size=8x8 tile=184 pal=3 flag=0xFF
+  piece x=-28 y=0 size=16x8 tile=182 pal=3 flag=0xFF
+  piece x=-12 y=-16 size=8x16 tile=120 pal=3 flag=0xFF
+  piece x=-28 y=-16 size=16x16 tile=118 pal=3 flag=0xFF
+
+frame 42
+  piece x=12 y=-10 size=16x8 tile=90 pal=3 flag=0x16 a0x=0x02
+  piece x=12 y=0 size=8x8 tile=187 pal=3 flag=0xFF
+  piece x=-4 y=0 size=16x8 tile=185 pal=3 flag=0xFF
+  piece x=12 y=-16 size=8x16 tile=123 pal=3 flag=0xFF
+  piece x=-4 y=-16 size=16x16 tile=121 pal=3 flag=0xFF
+  piece x=-12 y=0 size=8x8 tile=184 pal=3 flag=0xFF
+  piece x=-28 y=0 size=16x8 tile=182 pal=3 flag=0xFF
+  piece x=-12 y=-16 size=8x16 tile=120 pal=3 flag=0xFF
+  piece x=-28 y=-16 size=16x16 tile=118 pal=3 flag=0xFF
+
+frame 43
+  piece x=20 y=-8 size=16x8 tile=90 pal=3 flag=0xFF
+  piece x=12 y=0 size=8x8 tile=187 pal=3 flag=0xFF
+  piece x=-4 y=0 size=16x8 tile=185 pal=3 flag=0xFF
+  piece x=12 y=-16 size=8x16 tile=123 pal=3 flag=0xFF
+  piece x=-4 y=-16 size=16x16 tile=121 pal=3 flag=0xFF
+  piece x=-12 y=0 size=8x8 tile=184 pal=3 flag=0xFF
+  piece x=-28 y=0 size=16x8 tile=182 pal=3 flag=0xFF
+  piece x=-12 y=-16 size=8x16 tile=120 pal=3 flag=0xFF
+  piece x=-28 y=-16 size=16x16 tile=118 pal=3 flag=0xFF
+
+frame 44
+
+frame 45
+
+frame 46
+
+frame 47
+
+frame 48
+
+frame 49
+
+frame 50
+
+frame 51
+
+frame 52
+
+frame 53
+
+frame 54
+
+frame 55
+
+frame 56
+
+frame 57
+
+frame 58
+
+frame 59
+
+frame 60
+
+frame 61
+
+frame 62
+
+frame 63

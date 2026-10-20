@@ -1,0 +1,147 @@
+{
+  "rom": "jetters.gba",
+  "free_space": "0x08780000",
+  "free_space_end": "0x087C0000",
+  "asm_out": "build/sprite_frames.asm",
+  "sprites": {
+    "MPText": {
+      "note": "Battle READY / START! text. Table 0x0805D584 = normal battles (bank 5 entry 35), 0x080B531C = single-cart multiplayer copy. Frames 0-12 are READY, 13-16 START!, 17 blank.",
+      "tables": [
+        "0x0805D584",
+        "0x080B531C"
+      ],
+      "sheet": "assets/MPText.bmp",
+      "sheet_out": "sprites/MPText/MPText_sheet.bmp",
+      "max_tiles": 64,
+      "words": [
+        {
+          "name": "READY",
+          "tiles": "0-21",
+          "image": "sprites/MPText/READY.bmp",
+          "anchor": [
+            -51,
+            -28
+          ],
+          "rest": 6
+        },
+        {
+          "name": "START",
+          "tiles": "22-52",
+          "image": "sprites/MPText/START.bmp",
+          "anchor": [
+            -64,
+            -30
+          ],
+          "rest": 15
+        }
+      ]
+    },
+    "MPClear": {
+      "note": "Single-cart multiplayer CLEAR text. Frame 1 is the same layout drawn double-size while it scales.",
+      "tables": [
+        "0x080B59DC"
+      ],
+      "sheet": "assets/MPClear.bmp",
+      "sheet_out": "sprites/MPClear/MPClear_sheet.bmp",
+      "max_tiles": 32,
+      "words": [
+        {
+          "name": "CLEAR",
+          "tiles": "0-30",
+          "image": "sprites/MPClear/CLEAR.bmp",
+          "anchor": [
+            -60,
+            -28
+          ],
+          "rest": 0
+        }
+      ]
+    },
+    "DebugHurry": {
+      "note": "HURRY UP text (bank 5 entry 36).",
+      "tables": [
+        "0x0805D940"
+      ],
+      "sheet": "assets/DebugHurry.bmp"
+    },
+    "DebugTimeup": {
+      "note": "TIME UP text (bank 5 entry 37). DRAW (assets/DebugDraw.bmp) is loaded into the same VRAM and drawn with these same frames, so it is set up as a variant: Relayout packs TIMEUP.bmp and DRAW.bmp into the same tile slots.",
+      "tables": [
+        "0x0805E148"
+      ],
+      "sheet": "assets/DebugTimeup.bmp",
+      "sheet_out": "sprites/DebugTimeup/DebugTimeup_sheet.bmp",
+      "max_tiles": 64,
+      "variants": [
+        {
+          "name": "DRAW",
+          "sheet": "assets/DebugDraw.bmp",
+          "sheet_out": "sprites/DebugTimeup/DebugDraw_sheet.bmp"
+        }
+      ],
+      "words": [
+        {
+          "name": "TIME UP",
+          "tiles": "0-46",
+          "image": "sprites/DebugTimeup/TIMEUP.bmp",
+          "variant_images": {
+            "DRAW": "sprites/DebugTimeup/DRAW.bmp"
+          },
+          "anchor": [
+            -83,
+            -29
+          ],
+          "rest": 9
+        }
+      ]
+    },
+    "CubRace": {
+      "note": "Cub race minigame (bank 5 entry 74). Text tiles are rows 3-5 of the sheet; the other frames are character animation.",
+      "tables": [
+        "0x080F191C"
+      ],
+      "sheet": "assets/CubRace.bmp"
+    },
+    "MotoMini": {
+      "note": "Moto Jetter minigame text (bank 11 entry 6): READY (frames 0-16), START (18-19, 19 = scaling), CLEAR (20-21, 21 = scaling).",
+      "tables": [
+        "0x080D2E3C"
+      ],
+      "sheet": "assets/MotoMini.bmp",
+      "sheet_out": "sprites/MotoMini/MotoMini_sheet.bmp",
+      "max_tiles": 96,
+      "words": [
+        {
+          "name": "READY",
+          "tiles": "1-2,6-8,32-40,64-66,68-72",
+          "image": "sprites/MotoMini/READY.bmp",
+          "anchor": [
+            -52,
+            -28
+          ],
+          "rest": 8
+        },
+        {
+          "name": "START",
+          "tiles": "3-5,9-16,18,41-50,73-82",
+          "image": "sprites/MotoMini/START.bmp",
+          "anchor": [
+            -68,
+            -28
+          ],
+          "rest": 18
+        },
+        {
+          "name": "CLEAR",
+          "tiles": "19-30,51-62,83-94",
+          "image": "sprites/MotoMini/CLEAR.bmp",
+          "anchor": [
+            -59,
+            -28
+          ],
+          "rest": 20
+        }
+      ]
+    }
+  }
+}

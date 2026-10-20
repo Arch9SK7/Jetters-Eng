@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jetters Translation Editor</title>
+<link rel="stylesheet" href="/ui/style.css">
+</head><body>
+<header id="top">
+  <h1>Jetters Editor</h1>
+  <nav id="tabs">
+    <button data-view="sprites" class="active">Sprites<span class="dot" hidden>&#9679;</span></button>
+    <button data-view="maps">Tilemaps<span class="dot" hidden>&#9679;</span></button>
+    <button data-view="script">Script<span class="dot" hidden>&#9679;</span></button>
+  </nav>
+  <span class="sp"></span>
+  <button id="buildTestBtn" class="go" title="Save everything, run build.bat, then start the ROM in your emulator">&#9654; Build &amp; Test</button>
+  <button id="batBtn" title="Save everything and run build.bat">Run build.bat</button>
+  <button id="romBtn" title="Start jetters_eng.gba in your emulator">Open ROM</button>
+  <button id="settingsBtn" title="Settings">&#9881;</button>
+</header>
+
+<div id="views">
+<!-- ============================== SPRITES -->
+<section id="v-sprites" class="view active">
+  <div class="bar">
+    <label>Sprite <select id="spriteSel"></select></label>
+    <label>Table <select id="tableSel"></select></label>
+    <button id="addSpriteBtn" title="Add another sprite from the ROM">+ Sprite</button>
+    <span class="sp"></span>
+    <span id="status" class="status">-</span>
+    <button id="undoBtn" title="Ctrl+Z">Undo</button><button id="redoBtn" title="Ctrl+Y">Redo</button>
+    <button id="saveBtn" class="primary" title="Ctrl+S">Save</button>
+    <button id="buildBtn" title="Write build/sprite_frames.asm from all saved frames and maps">Build frames</button>
+  </div>
+  <aside class="l">
+    <h3>Frames</h3>
+    <div id="frames" class="list"></div>
+    <div class="row">
+      <button id="copyFrameBtn" title="Copy this frame's pieces">Copy</button>
+      <button id="pasteFrameBtn" title="Replace this frame with the copied pieces">Paste</button>
+      <button id="resetFrameBtn" class="danger" title="Put back the original ROM layout for this frame">Reset</button>
+    </div>
+    <h3>Animation</h3>
+    <div class="row"><select id="animSel" style="flex:1"></select></div>
+    <div class="row">
+      <button id="playBtn">&#9654; Play</button>
+      <label>Speed <select id="speedSel"><option value="0.25">&frac14;x</option><option value="0.5">&frac12;x</option><option value="1" selected>1x</option><option value="2">2x</option></select></label>
+    </div>
+    <div class="row"><label><input type="checkbox" id="loopChk" checked> Loop</label></div>
+    <div id="animInfo" class="help"></div>
+    <div id="wordsBox"></div>
+    <h3>Info</h3>
+    <div id="info" class="help"></div>
+  </aside>
+  <div class="center">
+    <div class="toolbar">
+      <label>Zoom <input type="range" id="zoom" min="1" max="8" value="4"></label>
+      <label><input type="checkbox" id="gridChk" checked> 8px grid</label>
+      <label><input type="checkbox" id="outlineChk" checked> Piece boxes</label>
+      <label><input type="checkbox" id="onionChk"> Onion skin</label>
+      <label><input type="checkbox" id="romChk"> Show ROM layout</label>
+      <span class="sp"></span><span id="cursor" class="muted"></span>
+    </div>
+    <div class="stage"><canvas id="cv"></canvas></div>
+    <div class="sheetWrap">
+      <div class="row">
+        <b>Sheet</b> <span id="sheetName" class="muted"></span>
+        <span class="legend"><span style="background:#3ccf7a"></span>used in this frame<span style="background:#ff5d6c"></span>inactive<span style="background:#ffd84d"></span>selected piece</span>
+        <span class="sp"></span>
+        <label>Zoom <input type="range" id="sheetZoom" min="1" max="6" value="3"></label>
+        <label><input type="checkbox" id="numChk"> Tile #</label>
+        <button id="placeSelBtn" disabled title="Add pieces that show the selected tiles">Add selection as pieces</button>
+        <label><input type="checkbox" id="emptyChk"> include empty tiles</label>
+      </div>
+      <div class="sheetScroll"><canvas id="sheet"></canvas></div>
+    </div>
+  </div>
+  <aside class="r">
+    <h3>Pieces <span id="pcount" class="muted"></span></h3>
+    <div id="pieces"></div>
+    <div class="row">
+      <button id="addPieceBtn">Add</button><button id="dupBtn" title="Ctrl+D">Duplicate</button>
+      <button id="upBtn" title="Draw earlier (on top)">&#9650;</button><button id="downBtn" title="Draw later (below)">&#9660;</button>
+      <button id="delBtn" class="danger">Delete</button>
+    </div>
+    <h3>Selected piece</h3>
+    <div id="inspector"></div>
+    <h3>Tips</h3>
+    <div class="help">
+      Drag pieces to move them (<kbd>Shift</kbd> snaps to 8px). <kbd>Ctrl</kbd>/<kbd>Shift</kbd>+click selects more; drag on empty space for a box selection.
+      Arrows nudge 1px, <kbd>Shift</kbd>+arrows 8px. <kbd>[</kbd> <kbd>]</kbd> change frame, <kbd>Del</kbd> deletes, <kbd>Ctrl+A</kbd> selects all.<br><br>
+      Click a sheet tile to point the selected piece at it. Drag across the sheet to select a block, then <b>Add selection as pieces</b>.
+      Red sheet tiles are <b>inactive</b>: they have pixels but no frame draws them.
+    </div>
+  </aside>
+</section>
+
+<!-- ============================== TILEMAPS -->
+<section id="v-maps" class="view">
+  <div class="bar">
+    <b>Background tilemaps</b>
+    <button id="mAddBtn">+ Map</button>
+    <span class="sp"></span>
+    <span id="mStatus" class="status">-</span>
+    <button id="mUndoBtn">Undo</button><button id="mRedoBtn">Redo</button>
+    <button id="mSaveBtn" class="primary" title="Ctrl+S">Save</button>
+  </div>
+  <aside class="l">
+    <h3>Maps</h3>
+    <div id="mList" class="list"></div>
+    <div id="mEmpty" class="help"></div>
+    <h3>Tile offset</h3>
+    <div class="help">Map tile number of the sheet's first tile. If the picture looks scrambled, change this until it lines up.</div>
+    <div class="row"><input type="number" id="mBase" min="0" max="1023"><button id="mBaseSave">Save offset</button></div>
+    <h3>Info</h3>
+    <div id="mInfo" class="help"></div>
+  </aside>
+  <div class="center">
+    <div class="toolbar">
+      <label>Zoom <input type="range" id="mZoom" min="1" max="8" value="4"></label>
+      <label><input type="checkbox" id="mGridChk" checked> Grid</label>
+      <label><input type="checkbox" id="mNumChk"> Tile #</label>
+      <label><input type="checkbox" id="mRomChk"> Show ROM map</label>
+      <span class="sp"></span><span id="mCursor" class="muted"></span>
+    </div>
+    <div class="stage"><canvas id="mcv"></canvas></div>
+    <div class="sheetWrap">
+      <div class="row">
+        <b>Tiles</b> <span id="mSheetName" class="muted"></span>
+        <span class="legend"><span style="background:#3ccf7a"></span>used by the map<span style="background:#ff5d6c"></span>inactive<span style="background:#4da3ff"></span>brush</span>
+        <span class="sp"></span>
+        <label>Zoom <input type="range" id="mSheetZoom" min="1" max="6" value="3"></label>
+        <label><input type="checkbox" id="mSheetNum"> Tile #</label>
+      </div>
+      <div class="sheetScroll"><canvas id="msheet"></canvas></div>
+    </div>
+  </div>
+  <aside class="r">
+    <h3>Brush</h3>
+    <div id="mBrush" class="help">Click or drag across tiles below to pick a brush, then click/drag on the map to paint.</div>
+    <div class="row"><label><input type="checkbox" id="mBrushH"> H flip</label><label><input type="checkbox" id="mBrushV"> V flip</label></div>
+    <div class="row"><label>Palette <input type="number" id="mBrushPal" min="0" max="15" value="0"></label>
+      <label><input type="checkbox" id="mKeepPal" checked> keep the cell's palette</label></div>
+    <div class="row"><button id="mClearBrush">Clear brush (Esc)</button></div>
+    <h3>Selected cell</h3>
+    <div id="mCell"></div>
+    <h3>Tips</h3>
+    <div class="help">
+      With no brush, clicking a cell selects it for editing. Right-click a cell to copy its tile into the brush (eyedropper).
+      A multi-tile brush stamps the whole block. Red tiles in the sheet have pixels but the map never shows them, so paint them in where they belong.
+      Some red tiles are drawn by the game's code instead of the map (score digits, for example), so those are fine as they are.
+      An orange corner on a cell means it differs from the ROM's map.
+      Saving writes the map <b>.bin</b>; <b>Build frames</b> / build.bat put maps that have a ROM address back into the ROM in place.
+    </div>
+  </aside>
+</section>
+
+<!-- ============================== SCRIPT -->
+<section id="v-script" class="view">
+  <div class="bar">
+    <b>Script preview</b>
+    <label>Box width <input type="number" id="sBoxW" min="40" max="240"> px</label>
+    <label>Rows <input type="number" id="sBoxR" min="1" max="8" style="width:50px"></label>
+    <button id="sBoxReset" title="Back to the in-game dialogue box: 184 px, 3 tile rows">Dialogue box</button>
+    <span class="sp"></span>
+    <span id="sStatus" class="status">-</span>
+    <button id="sCheckBtn" title="Run check_script.py (block overlaps, table characters)">Check script</button>
+    <button id="sSaveBtn" class="primary" title="Ctrl+S">Save file</button>
+  </div>
+  <aside class="l">
+    <h3>Files</h3>
+    <div id="sFiles" class="list files"></div>
+  </aside>
+  <aside class="l">
+    <div class="row"><input id="sSearch" placeholder="Search this file" style="flex:1"></div>
+    <div class="row"><label><input type="checkbox" id="sOnlyBad"> Only strings with problems</label></div>
+    <div id="sCount" class="help"></div>
+    <div id="sStrings" class="list strings"></div>
+  </aside>
+  <div id="sRight">
+    <div id="sHead" class="row"></div>
+    <textarea id="sEdit" spellcheck="true" placeholder="Pick a string"></textarea>
+    <div class="row"><button id="sRevertBtn">Undo changes to this string</button><span class="sp"></span>
+      <span class="help">Each box below is one A-button press. Item names come from jetters_011.txt; numbers show as 999.</span></div>
+    <div id="sPages"></div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <div id="logbar"><span id="logArrow">&#9656;</span> Output <span id="logLast" class="muted"></span></div>
+  <pre id="log"></pre>
+</footer>
+
+<dialog id="addDlg">
+  <h3 style="margin-top:0">Add a sprite from the ROM</h3>
+  <p class="help">Pick a frame table. Bank 5 and 11 entries list their graphics, so the Japanese sheet can be extracted for you.
+  If you already have your own sheet BMP (indexed), enter its path instead.</p>
+  <div id="bankList" class="tbl"></div>
+  <div class="row" style="margin-top:8px">
+    <label>Name <input id="newName" placeholder="e.g. BombIcons"></label>
+    <label>Table <input id="newTable" placeholder="0x0805D584" style="width:110px"></label>
+  </div>
+  <div class="row">
+    <label>Sheet BMP <input id="newSheet" placeholder="assets/MySprite.bmp" style="width:260px"></label>
+    <label><input type="checkbox" id="newExtract"> extract the Japanese sheet from the ROM</label>
+  </div>
+  <div class="row" style="justify-content:flex-end">
+    <button id="addCancel">Cancel</button><button id="addOk" class="primary">Add sprite</button>
+  </div>
+</dialog>
+
+<dialog id="mAddDlg">
+  <h3 style="margin-top:0">Add a background tilemap</h3>
+  <p class="help">A map is a grid of 16-bit entries (tile number, flips, palette). Give the tile sheet BMP your build converts, and either
+  an existing <b>.bin</b> map file or the ROM address of an uncompressed map (it is then written back in place).</p>
+  <div class="row"><label>Name <input id="maName" placeholder="e.g. TitleMenu"></label></div>
+  <div class="row"><label>Tile sheet BMP <input id="maSheet" placeholder="assets/StoryMini.bmp" style="width:280px"></label></div>
+  <div class="row"><label>Map .bin file <input id="maFile" placeholder="extract/2447C4_m.bin (or leave blank)" style="width:280px"></label></div>
+  <div class="row"><label>ROM address <input id="maRom" placeholder="0x082631F8 (optional)" style="width:140px"></label></div>
+  <div class="row"><label>Width (tiles) <input type="number" id="maW" value="32"></label><label>Height <input type="number" id="maH" value="20"></label>
+    <label>Tile offset <input type="number" id="maBase" value="0"></label></div>
+  <div class="row" style="justify-content:flex-end"><button id="maCancel">Cancel</button><button id="maOk" class="primary">Add map</button></div>
+</dialog>
+
+<dialog id="setDlg">
+  <h3 style="margin-top:0">Settings</h3>
+  <div class="row"><label>Emulator <input id="setEmu" placeholder="C:\Emulators\mGBA\mGBA.exe" style="width:420px"></label></div>
+  <p class="help">Used by Build &amp; Test and Open ROM. Leave empty to open jetters_eng.gba with whatever program Windows uses for .gba files.</p>
+  <div class="row" style="justify-content:flex-end"><button id="setCancel">Cancel</button><button id="setOk" class="primary">Save</button></div>
+</dialog>
+
+<script src="/ui/common.js"></script>
+<script src="/ui/sprites.js"></script>
+<script src="/ui/maps.js"></script>
+<script src="/ui/script.js"></script>
+<script>App.start();</script>
+</body></html>

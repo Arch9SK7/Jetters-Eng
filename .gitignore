@@ -20,3 +20,8 @@
 !/dump_script/jetters_commands.txt
 /extract/*
 jettersENGPATCH.ups
+
+/sprites/preview/
+/sprites/frames/*.bak
+/tools/__pycache__/
+/sprites/editor_settings.json

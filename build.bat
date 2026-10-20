@@ -69,15 +69,31 @@ tools\g4custom build\Pause_Tiles.bin assets\HUD_PauseMP.bmp
 tools\lzss -evo build\Pause_Tiles.bin
 
 :: Multiplayer Battle Text Sprites = fix tile slot ids, How? ASM
-tools\g4custom build\MPText_Tiles.bin assets\MPText.bmp
+if exist sprites\MPText\MPText_sheet.bmp (
+  tools\g4custom build\MPText_Tiles.bin sprites\MPText\MPText_sheet.bmp
+) else (
+  tools\g4custom build\MPText_Tiles.bin assets\MPText.bmp
+)
 tools\lzss -evo build\MPText_Tiles.bin
-tools\g4custom build\MPClear_Tiles.bin assets\MPClear.bmp
+if exist sprites\MPClear\MPClear_sheet.bmp (
+  tools\g4custom build\MPClear_Tiles.bin sprites\MPClear\MPClear_sheet.bmp
+) else (
+  tools\g4custom build\MPClear_Tiles.bin assets\MPClear.bmp
+)
 tools\lzss -evo build\MPClear_Tiles.bin
 tools\g4custom build\DebugHurry_Tiles.bin assets\DebugHurry.bmp
 tools\lzss -evo build\DebugHurry_Tiles.bin
-tools\g4custom build\DebugTimeup_Tiles.bin assets\DebugTimeup.bmp
+if exist sprites\DebugTimeup\DebugTimeup_sheet.bmp (
+  tools\g4custom build\DebugTimeup_Tiles.bin sprites\DebugTimeup\DebugTimeup_sheet.bmp
+) else (
+  tools\g4custom build\DebugTimeup_Tiles.bin assets\DebugTimeup.bmp
+)
 tools\lzss -evo build\DebugTimeup_Tiles.bin
-tools\g4custom build\DebugDraw_Tiles.bin assets\DebugDraw.bmp
+if exist sprites\DebugTimeup\DebugDraw_sheet.bmp (
+  tools\g4custom build\DebugDraw_Tiles.bin sprites\DebugTimeup\DebugDraw_sheet.bmp
+) else (
+  tools\g4custom build\DebugDraw_Tiles.bin assets\DebugDraw.bmp
+)
 tools\lzss -evo build\DebugDraw_Tiles.bin
 
 :: Story Mode Minigame Text
@@ -93,15 +109,24 @@ tools\lzss -evo build\CubScoreTime_Tiles.bin
 :: Moto Jetter Mini Game
 tools\g4custom build\MotoJet_Tiles.bin assets\MotoJet.bmp
 tools\lzss -evo build\MotoJet_Tiles.bin
-tools\g4custom build\MotoMini_Tiles.bin assets\MotoMini.bmp
+if exist sprites\MotoMini\MotoMini_sheet.bmp (
+  tools\g4custom build\MotoMini_Tiles.bin sprites\MotoMini\MotoMini_sheet.bmp
+) else (
+  tools\g4custom build\MotoMini_Tiles.bin assets\MotoMini.bmp
+)
 tools\lzss -evo build\MotoMini_Tiles.bin
 
 :: End credits
 tools\g4custom build\EndCred_Tiles.bin assets\EndCred.bmp
 tools\lzss -evo build\EndCred_Tiles.bin
 
+:: Sprite frame layouts (sprites\frames\*.txt -> build\sprite_frames.asm)
+python tools\spriteframes.py build || goto :error
+
 :: --- 4. Final Injection ---
-tools\armips.exe build.asm -stat
+tools\armips.exe build.asm -stat || goto :error
+:: Make sure no script file overlaps the next one (and the text areas are still empty)
+python tools\check_script.py --rom jetters_eng.gba || goto :error
 tools\Atlas jetters_eng.gba script\jetters_000.txt
 tools\Atlas jetters_eng.gba script\jetters_001.txt
 tools\Atlas jetters_eng.gba script\jetters_002.txt
@@ -124,3 +149,9 @@ tools\ups diff --base jetters.gba --modified jetters_eng.gba --output jettersENG
 
 echo Build Complete!
 pause
+goto :eof
+
+:error
+echo Build stopped - see the message above.
+pause
+exit /b 1

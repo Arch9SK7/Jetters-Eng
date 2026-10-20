@@ -1,0 +1,13 @@
+{
+  "maps": {
+    "StoryMini": {
+      "note": "Story-mode minigame HIGH-SCORE / TIME bar (32x2 map at 0x082631F8, tiles from assets/StoryMini.bmp starting at tile 0).",
+      "sheet": "assets/StoryMini.bmp",
+      "width": 32,
+      "height": 2,
+      "base": 0,
+      "file": "sprites/maps/StoryMini_m.bin",
+      "rom": "0x082631F8"
+    }
+  }
+}

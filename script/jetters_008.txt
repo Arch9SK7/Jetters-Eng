@@ -16,7 +16,7 @@
 // Create our pointer type
 #CREATEPTR(GBA, "LINEAR", $-08000000, 32)
 
-#JMP($578000)
+#JMP($590000)
 // --------------------------------------
 
 //POINTER #0 @ $1CC818 - STRING #0 @ $1CA45C
