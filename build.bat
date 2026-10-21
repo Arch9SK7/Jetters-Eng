@@ -5,7 +5,8 @@ if not exist build mkdir build
 tools\g1.exe assets\BattleMenu.bmp build\BattleMenuTile.bin build\BattleMenuMap.bin
 tools\lzss.exe -evo build\BattleMenuTile.bin
 tools\c1.exe assets\BattleMenu.txt build\BattleMenuMap.bin build\BattleMenuMap.asm
-tools\g2.exe assets\Font.bmp build\Font.bin
+:: story font (any palette order / bit depth works; replaces g2.exe)
+python tools\font1bpp.py assets\Font.bmp build\Font.bin || goto :error
 :: Convert the 16-color BMP into raw GBA tiles
 tools\g4custom build\FontBattle_Tiles.bin assets\FontBattle.bmp
 
